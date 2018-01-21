@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Firebase," />
 
 
 
@@ -94,14 +94,24 @@
 
 
 
+<meta name="description" content="How to Store Image to Firebase in IOSFirst let’s see the official video about storage in Firebase:  How it works in Firebase ? In short, using Firebase Storage to store the images and using Database t">
+<meta name="keywords" content="Firebase">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to store Image to Firebase with IOS">
+<meta property="og:title" content="How to store Image to Firebase in IOS">
 <meta property="og:url" content="http://yoursite.com/2018/01/21/How-to-store-Image-to-Firebase-with-IOS/index.html">
 <meta property="og:site_name" content="Pintaigao He">
+<meta property="og:description" content="How to Store Image to Firebase in IOSFirst let’s see the official video about storage in Firebase:  How it works in Firebase ? In short, using Firebase Storage to store the images and using Database t">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-01-21T17:06:42.642Z">
+<meta property="og:image" content="http://yoursite.com/2018/01/21/How-to-store-Image-to-Firebase-with-IOS/How-to-store-Image-to-Firebase-with-IOS/image1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/01/21/How-to-store-Image-to-Firebase-with-IOS/How-to-store-Image-to-Firebase-with-IOS/image3.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/21/How-to-store-Image-to-Firebase-with-IOS/How-to-store-Image-to-Firebase-with-IOS/image4.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/21/How-to-store-Image-to-Firebase-with-IOS/How-to-store-Image-to-Firebase-with-IOS/image5.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/21/How-to-store-Image-to-Firebase-with-IOS/How-to-store-Image-to-Firebase-with-IOS/image6.png">
+<meta property="og:updated_time" content="2018-01-21T19:37:15.808Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How to store Image to Firebase with IOS">
+<meta name="twitter:title" content="How to store Image to Firebase in IOS">
+<meta name="twitter:description" content="How to Store Image to Firebase in IOSFirst let’s see the official video about storage in Firebase:  How it works in Firebase ? In short, using Firebase Storage to store the images and using Database t">
+<meta name="twitter:image" content="http://yoursite.com/2018/01/21/How-to-store-Image-to-Firebase-with-IOS/How-to-store-Image-to-Firebase-with-IOS/image1.jpg">
 
 
 
@@ -136,7 +146,7 @@
 
 
 
-  <title>How to store Image to Firebase with IOS | Pintaigao He</title>
+  <title>How to store Image to Firebase in IOS | Pintaigao He</title>
   
 
 
@@ -286,7 +296,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">How to store Image to Firebase with IOS</h1>
+          <h1 class="post-title" itemprop="name headline">How to store Image to Firebase in IOS</h1>
         
 
         <div class="post-meta">
@@ -336,7 +346,41 @@
       
 
       
-        <iframe width="854" height="480" src="https://www.youtube.com/embed/_tyjqozrEPY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <h1 id="How-to-Store-Image-to-Firebase-in-IOS"><a href="#How-to-Store-Image-to-Firebase-in-IOS" class="headerlink" title="How to Store Image to Firebase in IOS"></a>How to Store Image to Firebase in IOS</h1><p>First let’s see the official video about storage in Firebase:</p>
+<!--<iframe width="854" height="480" src="https://www.youtube.com/embed/_tyjqozrEPY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+<h2 id="How-it-works-in-Firebase"><a href="#How-it-works-in-Firebase" class="headerlink" title="How it works in Firebase ?"></a>How it works in Firebase ?</h2><p><img src="How-to-store-Image-to-Firebase-with-IOS/image1.jpg" alt=""></p>
+<p>In short, using Firebase Storage to store the images and using Database to refer the image.First, we need to upload the image to the storage, which will received a link of the image after succeed，and we put the link into database for the future use.So, THAT’S IT!</p>
+<p>So move futher in detail, how we can do it</p>
+<h3 id="firebase-setting"><a href="#firebase-setting" class="headerlink" title="firebase setting"></a>firebase setting</h3><p>To use firbase to store image, first we need to setting up in firebase</p>
+<p>1.Create a new project in the firebase(name whatever you want),entering the console</p>
+<p><img src="How-to-store-Image-to-Firebase-with-IOS/image3.png" alt=""></p>
+<p>2.Selecting The Storage in left hand side, click start and you will see the following things</p>
+<p><img src="How-to-store-Image-to-Firebase-with-IOS/image4.png" width="50%" height="50%" align="center/"></p>
+<p>3.Go to the rule page, deleting the <code>if condition</code> behind <code>allow read, write</code>, and public it(ignore the warning)</p>
+<p>4.Pod install Firebase-Core</p>
+<p>5.Setting up the firebase in AppDelegate</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">application</span><span class="params">(<span class="number">_</span> application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">        <span class="type">FirebaseApp</span>.configure()</span><br><span class="line">        <span class="comment">// Override point for customization after application launch.</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">### <span class="type">Uploading</span> <span class="type">Image</span></span><br><span class="line"></span><br><span class="line"><span class="type">So</span> after finishing all of the pre-work, <span class="keyword">let</span>'s go to the main content</span><br><span class="line"></span><br><span class="line"><span class="number">1</span>. <span class="type">First</span> you need to link the <span class="type">UIButton</span>(indicate upload image) to the <span class="type">View</span> <span class="type">Controller</span> and inject <span class="type">UIImagePickerController</span> which allows us to choose image from <span class="type">Photo</span></span><br><span class="line"></span><br><span class="line">```swift</span><br><span class="line">	<span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">uploadBtnAction</span><span class="params">(<span class="number">_</span> sender: UIButton)</span></span> &#123;</span><br><span class="line">      <span class="comment">// Initiate the UIImagePicker</span></span><br><span class="line">      <span class="keyword">let</span> imagePickerController = <span class="type">UIImagePickerController</span>()</span><br><span class="line">      <span class="comment">// setting up delegate</span></span><br><span class="line">      imagePickerController.delegate = <span class="keyword">self</span></span><br><span class="line">      <span class="comment">// creating a UIAlertController instance and setting the title and style to actionSheet</span></span><br><span class="line">      <span class="keyword">let</span> imagePickerAlertController = <span class="type">UIAlertController</span>(title: <span class="string">"Upload Image"</span>, message: <span class="string">"Please choose the image	"</span>, preferredStyle: .actionSheet)</span><br><span class="line">      <span class="comment">// creating three UIAlertAction instance and do the same things as above</span></span><br><span class="line">      <span class="keyword">let</span> imageFromLibAction = <span class="type">UIAlertAction</span>(title: <span class="string">"PhotoLibrary"</span>, style: .<span class="keyword">default</span>) &#123; (<span class="type">Void</span>) <span class="keyword">in</span></span><br><span class="line"> </span><br><span class="line">          <span class="comment">// Whether can we get the photo from photolibrary</span></span><br><span class="line">          <span class="keyword">if</span> <span class="type">UIImagePickerController</span>.isSourceTypeAvailable(.photoLibrary) &#123;</span><br><span class="line">              <span class="comment">// If we can, setting image source of UIImagePickerController is photolibrary (.photoLibrary)，and present UIImagePickerController</span></span><br><span class="line">              imagePickerController.sourceType = .photoLibrary</span><br><span class="line">              <span class="keyword">self</span>.present(imagePickerController, animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">let</span> imageFromCameraAction = <span class="type">UIAlertAction</span>(title: <span class="string">"camera"</span>, style: .<span class="keyword">default</span>) &#123; (<span class="type">Void</span>) <span class="keyword">in</span></span><br><span class="line"> </span><br><span class="line">          <span class="comment">// To see if we can get photos from camera</span></span><br><span class="line">          <span class="keyword">if</span> <span class="type">UIImagePickerController</span>.isSourceTypeAvailable(.camera) &#123; </span><br><span class="line">              <span class="comment">// if we can，setting the source of UIImagePickerController is camera (.camera)，and present UIImagePickerController</span></span><br><span class="line">              imagePickerController.sourceType = .camera</span><br><span class="line">              <span class="keyword">self</span>.present(imagePickerController, animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="comment">// adding a cancel action </span></span><br><span class="line">      <span class="keyword">let</span> cancelAction = <span class="type">UIAlertAction</span>(title: <span class="string">"cancel"</span>, style: .cancel) &#123; (<span class="type">Void</span>) <span class="keyword">in</span></span><br><span class="line"> </span><br><span class="line">          imagePickerAlertController.dismiss(animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">      &#125;</span><br><span class="line"> </span><br><span class="line">      <span class="comment">// add three UIAlertActions above to UIAlertController</span></span><br><span class="line">      imagePickerAlertController.addAction(imageFromLibAction)</span><br><span class="line">      imagePickerAlertController.addAction(imageFromCameraAction)</span><br><span class="line">      imagePickerAlertController.addAction(cancelAction)</span><br><span class="line">      present(imagePickerAlertController, animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">  &#125;</span><br><span class="line"> </span><br><span class="line">```   </span><br><span class="line"><span class="number">2</span>. <span class="type">Creating</span> `<span class="type">UIImagePickerControllerDelegate</span>` and `<span class="type">UINavigationControllerDelegate</span>` to <span class="keyword">get</span> the image from photolibrary and camera</span><br><span class="line"></span><br><span class="line">```swift</span><br><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">ViewController</span>: <span class="title">UIImagePickerControllerDelegate</span>, <span class="title">UINavigationControllerDelegate</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">imagePickerController</span><span class="params">(<span class="number">_</span> picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])</span></span> &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">var</span> selectedImageFromPicker: <span class="type">UIImage</span>?</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// get the file from UIImagePickerController </span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">let</span> pickedImage = info[<span class="type">UIImagePickerControllerOriginalImage</span>] <span class="keyword">as</span>? <span class="type">UIImage</span> &#123;</span><br><span class="line">            </span><br><span class="line">            selectedImageFromPicker = pickedImage</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// generating uuid</span></span><br><span class="line">        <span class="keyword">let</span> uniqueString = <span class="type">NSUUID</span>().uuidString</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">let</span> selectedImage = selectedImageFromPicker &#123;</span><br><span class="line">            </span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"<span class="subst">\(uniqueString)</span>, <span class="subst">\(selectedImage)</span>"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        dismiss(animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>all finished it will look like this: </p>
+<center><br><img src="How-to-store-Image-to-Firebase-with-IOS/image5.png" alt=""><br></center>
+
+<p>3.Adding two properties into info.plist : <code>Privacy – Camera Usage Description</code> and <code>Privacy – Photo Library Usage Description</code></p>
+<center><br><img src="How-to-store-Image-to-Firebase-with-IOS/image6.png" alt=""><br></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
     </div>
     
@@ -350,6 +394,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Firebase/" rel="tag"># Firebase</a>
+          
+        </div>
       
 
       
@@ -420,8 +470,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avator.png"
@@ -458,7 +517,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">tags</span>
               
             </div>
@@ -496,6 +555,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-Store-Image-to-Firebase-in-IOS"><span class="nav-number">1.</span> <span class="nav-text">How to Store Image to Firebase in IOS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#How-it-works-in-Firebase"><span class="nav-number">1.1.</span> <span class="nav-text">How it works in Firebase ?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#firebase-setting"><span class="nav-number">1.1.1.</span> <span class="nav-text">firebase setting</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
