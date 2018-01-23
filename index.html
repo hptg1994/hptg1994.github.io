@@ -270,6 +270,363 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/23/Binding-and-Avoid-Bidning-in-React/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Pintaigao He">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pintaigao He">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/23/Binding-and-Avoid-Bidning-in-React/" itemprop="url">Binding and Avoid Bidning in React</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-23T11:46:52-05:00">
+                2018-01-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Approach 1: Use React.createClass</span></span><br><span class="line"><span class="keyword">var</span> HelloWorld = React.createClass(&#123;</span><br><span class="line">  getInitialState() &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123; <span class="attr">message</span>: <span class="string">'Hi'</span> &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  logMessage() &#123;</span><br><span class="line">    <span class="comment">// this magically works because React.createClass autobinds.</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.state.message);</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;input type=<span class="string">"button"</span> value=<span class="string">"Log"</span> onClick=&#123;<span class="keyword">this</span>.logMessage&#125; /&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Approach 2: Bind in Render</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.state = &#123; <span class="attr">message</span>: <span class="string">'Hi'</span> &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  logMessage() &#123;</span><br><span class="line">    <span class="comment">// This works because of the bind in render below.</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.state.message);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;input type=<span class="string">"button"</span> value=<span class="string">"Log"</span> onClick=&#123;<span class="keyword">this</span>.logMessage.bind(<span class="keyword">this</span>)&#125; /&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Approach 3: Use Arrow Function in Render</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.state = &#123; <span class="attr">message</span>: <span class="string">'Hi'</span> &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  logMessage() &#123;</span><br><span class="line">    <span class="comment">// This works because of the arrow function in render below.</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.state.message);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;input type=<span class="string">"button"</span> value=<span class="string">"Log"</span> onClick=&#123;() =&gt; <span class="keyword">this</span>.logMessage()&#125; /&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Approach 4: Bind in Constructor</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.state = &#123; <span class="attr">message</span>: <span class="string">'Hi'</span> &#125;;</span><br><span class="line">    <span class="keyword">this</span>.logMessage = <span class="keyword">this</span>.logMessage.bind(<span class="keyword">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  logMessage() &#123;</span><br><span class="line">    <span class="comment">// This works because of the bind in the constructor above.</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.state.message);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;input type=<span class="string">"button"</span> value=<span class="string">"Log"</span> onClick=&#123;<span class="keyword">this</span>.logMessage&#125; /&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Approach 5: Arrow Function in Class Property</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="comment">// Note that state is a property,</span></span><br><span class="line">  <span class="comment">// so no constructor is needed in this case.</span></span><br><span class="line">  state = &#123;</span><br><span class="line">    message: <span class="string">'Hi'</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  logMessage = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// This works because arrow funcs adopt the this binding of the enclosing scope.</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.state.message);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;input type=<span class="string">"button"</span> value=<span class="string">"Log"</span> onClick=&#123;<span class="keyword">this</span>.logMessage&#125; /&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/22/Deep-road-of-webpack-1-path-of-the-image/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Pintaigao He">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pintaigao He">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/22/Deep-road-of-webpack-1-path-of-the-image/" itemprop="url">Deep road of webpack(1) -- path of the image</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-22T15:40:33-05:00">
+                2018-01-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/21/A-Note-of-Webpack-that-in-my-Project/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Pintaigao He">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pintaigao He">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/21/A-Note-of-Webpack-that-in-my-Project/" itemprop="url">A Note of Webpack that in my Project</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-21T16:34:29-05:00">
+                2018-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/21/How-to-store-Image-to-Firebase-with-IOS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -359,7 +716,7 @@
 <h3 id="Uploading-Image"><a href="#Uploading-Image" class="headerlink" title="Uploading Image"></a>Uploading Image</h3><p>So after finishing all of the pre-work, let’s go to the main content</p>
 <p>1.First you need to link the UIButton(indicate upload image) to the View Controller and inject UIImagePickerController which allows us to choose image from Photo</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@IBAction</span> <span class="function"><span class="keyword">func</span> <span class="title">uploadBtnAction</span><span class="params">(<span class="number">_</span> sender: UIButton)</span></span> &#123;</span><br><span class="line">	<span class="comment">// Initiate the UIImagePicker</span></span><br><span class="line">	<span class="keyword">let</span> imagePickerController = <span class="type">UIImagePickerController</span>()</span><br><span class="line">	<span class="comment">// setting up delegate</span></span><br><span class="line">	imagePickerController.delegate = <span class="keyword">self</span></span><br><span class="line">	<span class="comment">// creating a UIAlertController instance and setting the title and style to actionSheet</span></span><br><span class="line">	<span class="keyword">let</span> imagePickerAlertController = <span class="type">UIAlertController</span>(title: <span class="string">"Upload Image"</span>, message: <span class="string">"Please choose the image"</span>, preferredStyle: .actionSheet)</span><br><span class="line">	<span class="comment">// creating three UIAlertAction instance and do the same things as above</span></span><br><span class="line">	<span class="keyword">let</span> imageFromLibAction = <span class="type">UIAlertAction</span>(title: <span class="string">"PhotoLibrary"</span>, style: .<span class="keyword">default</span>) &#123; (<span class="type">Void</span>) <span class="keyword">in</span> </span><br><span class="line">		<span class="comment">// Whether can we get the photo from photolibrary</span></span><br><span class="line">		<span class="keyword">if</span> <span class="type">UIImagePickerController</span>.isSourceTypeAvailable(.photoLibrary) &#123;</span><br><span class="line">			<span class="comment">// If we can, setting image source of UIImagePickerController is photolibrary (.photoLibrary)，and present UIImagePickerController</span></span><br><span class="line">			imagePickerController.sourceType = .photoLibrary</span><br><span class="line">			<span class="keyword">self</span>.present(imagePickerController, animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">let</span> imageFromCameraAction = <span class="type">UIAlertAction</span>(title: <span class="string">"camera"</span>, style: .<span class="keyword">default</span>) &#123; (<span class="type">Void</span>) <span class="keyword">in</span></span><br><span class="line">		<span class="comment">// To see if we can get photos from camera</span></span><br><span class="line">		<span class="keyword">if</span> <span class="type">UIImagePickerController</span>.isSourceTypeAvailable(.camera) &#123; </span><br><span class="line">			<span class="comment">// if we can，setting the source of UIImagePickerController is camera (.camera)，and present UIImagePickerController</span></span><br><span class="line">			imagePickerController.sourceType = .camera</span><br><span class="line">			<span class="keyword">self</span>.present(imagePickerController, animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"> 	<span class="comment">// adding a cancel action </span></span><br><span class="line">	<span class="keyword">let</span> cancelAction = <span class="type">UIAlertAction</span>(title: <span class="string">"cancel"</span>, style: .cancel) &#123; (<span class="type">Void</span>) <span class="keyword">in</span></span><br><span class="line">		imagePickerAlertController.dismiss(animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="comment">// add three UIAlertActions above to UIAlertController</span></span><br><span class="line">   imagePickerAlertController.addAction(imageFromLibAction)</span><br><span class="line">	imagePickerAlertController.addAction(imageFromCameraAction)</span><br><span class="line">	imagePickerAlertController.addAction(cancelAction)</span><br><span class="line">	present(imagePickerAlertController, animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>2.Creating<code>UIImagePickerControllerDelegate</code>and<code>UINavigationControllerDelegate</code>to get the image from photolibrary and camera<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">ViewController</span>: <span class="title">UIImagePickerControllerDelegate</span>, <span class="title">UINavigationControllerDelegate</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">func</span> <span class="title">imagePickerController</span><span class="params">(<span class="number">_</span> picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])</span></span> &#123;     </span><br><span class="line">		<span class="keyword">var</span> selectedImageFromPicker: <span class="type">UIImage</span>?		<span class="comment">// get the file from UIImagePickerController </span></span><br><span class="line">		<span class="keyword">if</span> <span class="keyword">let</span> pickedImage = info[<span class="type">UIImagePickerControllerOriginalImage</span>] <span class="keyword">as</span>? <span class="type">UIImage</span> &#123;</span><br><span class="line">			selectedImageFromPicker = pickedImage</span><br><span class="line">		&#125; </span><br><span class="line">       <span class="comment">// generating uuid</span></span><br><span class="line">       <span class="keyword">let</span> uniqueString = <span class="type">NSUUID</span>().uuidString 		<span class="keyword">if</span> <span class="keyword">let</span> selectedImage = selectedImageFromPicker &#123;     			<span class="built_in">print</span>(<span class="string">"<span class="subst">\(uniqueString)</span>, <span class="subst">\(selectedImage)</span>"</span>)</span><br><span class="line">		&#125; </span><br><span class="line">      	dismiss(animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.Creating<code>UIImagePickerControllerDelegate</code>and<code>UINavigationControllerDelegate</code>to get the image from photolibrary and camera<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">ViewController</span>: <span class="title">UIImagePickerControllerDelegate</span>, <span class="title">UINavigationControllerDelegate</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">func</span> <span class="title">imagePickerController</span><span class="params">(<span class="number">_</span> picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])</span></span> &#123;     </span><br><span class="line">		<span class="keyword">var</span> selectedImageFromPicker: <span class="type">UIImage</span>?		<span class="comment">// get the file from UIImagePickerController </span></span><br><span class="line">		<span class="keyword">if</span> <span class="keyword">let</span> pickedImage = info[<span class="type">UIImagePickerControllerOriginalImage</span>] <span class="keyword">as</span>? <span class="type">UIImage</span> &#123;</span><br><span class="line">			selectedImageFromPicker = pickedImage</span><br><span class="line">		&#125; </span><br><span class="line">       <span class="comment">// generating uuid</span></span><br><span class="line">       <span class="keyword">let</span> uniqueString = <span class="type">NSUUID</span>().uuidString 		<span class="keyword">if</span> <span class="keyword">let</span> selectedImage = selectedImageFromPicker &#123;     			<span class="built_in">print</span>(<span class="string">"\(uniqueString), \(selectedImage)"</span>)</span><br><span class="line">		&#125; </span><br><span class="line">      	dismiss(animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>all finished it will look like this: </p>
 <center><br><img src="/2018/01/21/How-to-store-Image-to-Firebase-with-IOS/image5.png" alt=""><br></center>
 
@@ -987,7 +1344,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
