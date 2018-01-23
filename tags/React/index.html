@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Question Firebase," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -94,18 +94,13 @@
 
 
 
-<meta name="description" content="So the question is : If I want to update the display name, How to update it ? -Users   -KUanJA9egwmPsJCxXpv       displayName:&amp;quot;Test Trainer&amp;quot;       email:&amp;quot;test@gmail.com&amp;quot;       uid:">
-<meta name="keywords" content="Question Firebase">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Q:update firebase data">
-<meta property="og:url" content="http://yoursite.com/2018/01/19/Q-update-firebase-data/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pintaigao He">
+<meta property="og:url" content="http://yoursite.com/tags/React/index.html">
 <meta property="og:site_name" content="Pintaigao He">
-<meta property="og:description" content="So the question is : If I want to update the display name, How to update it ? -Users   -KUanJA9egwmPsJCxXpv       displayName:&amp;quot;Test Trainer&amp;quot;       email:&amp;quot;test@gmail.com&amp;quot;       uid:">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-01-20T02:44:49.560Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Q:update firebase data">
-<meta name="twitter:description" content="So the question is : If I want to update the display name, How to update it ? -Users   -KUanJA9egwmPsJCxXpv       displayName:&amp;quot;Test Trainer&amp;quot;       email:&amp;quot;test@gmail.com&amp;quot;       uid:">
+<meta name="twitter:title" content="Pintaigao He">
 
 
 
@@ -134,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/19/Q-update-firebase-data/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/React/"/>
 
 
 
 
 
-  <title>Q:update firebase data | Pintaigao He</title>
+  <title>Tag: React | Pintaigao He</title>
   
 
 
@@ -165,7 +160,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -259,173 +254,54 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>React<small>Tag</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/19/Q-update-firebase-data/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Pintaigao He">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avator.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pintaigao He">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">Q:update firebase data</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2018/01/23/Binding-and-Avoid-Bidning-in-React/" itemprop="url">
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span itemprop="name">Binding and Avoid Bidning in React</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-19T21:22:23-05:00">
-                2018-01-19
-              </time>
-            
+            </a>
+        
+      </h2>
 
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-01-23T11:46:52-05:00"
+              content="2018-01-23" >
+          01-23
+        </time>
+      </div>
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>So the question is :</p>
-<p>If I want to update the display name, How to update it ?</p>
-<pre><code>-Users
-  -KUanJA9egwmPsJCxXpv
-
-     displayName:&quot;Test Trainer&quot;
-
-     email:&quot;test@gmail.com&quot;
-
-     uid: &quot;jRXMsNZHR2exqifnR2rXcceEMxF2&quot;
-</code></pre><p>&lt;–!more–&gt;</p>
-<p>And the answer is : </p>
-<p>If you want to update the displayname of this user</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> db = firebase.database();</span><br><span class="line">db.ref(<span class="string">"-Users/-KUanJA9egwmPsJCxXpv/displayName"</span>).set(<span class="string">"New trainer"</span>);</span><br></pre></td></tr></table></figure>
-<p>equals to</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.ref(<span class="string">"-Users/-KUanJA9egwmPsJCxXpv"</span>).update(&#123; <span class="attr">displayName</span>: <span class="string">"New trainer"</span> &#125;);</span><br></pre></td></tr></table></figure>
-<p>Probably you need to look up the ID first :<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> query db.ref(<span class="string">"-Users"</span>).orderByKey(<span class="string">"uid"</span>).equalTo(<span class="string">"jRXMsNZHR2exqifnR2rXcceEMxF2"</span>);</span><br><span class="line">query.once(<span class="string">"child_added"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">snapshot</span>) </span>&#123;</span><br><span class="line">  snapshot.ref.update(&#123; <span class="attr">displayName</span>: <span class="string">"New trainer"</span> &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>But Here is a better Design of Database(which put the uid as the parent of main content)</p>
-<pre><code>-Users
-  jRXMsNZHR2exqifnR2rXcceEMxF2
-     displayName:&quot;Test Trainer&quot;    
-     email:&quot;test@gmail.com&quot;
-</code></pre><p>Now you can update by :</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> currentUser = firebase.auth().currentUser;</span><br><span class="line">db.ref(<span class="string">"-Users/"</span>+currentUser.uid).update(&#123; <span class="attr">displayName</span>: <span class="string">"New trainer"</span> &#125;);</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Question-Firebase/" rel="tag"># Question Firebase</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/01/19/testing-on-Web-API/" rel="next" title="testing on Web API">
-                <i class="fa fa-chevron-left"></i> testing on Web API
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/21/How-to-store-Image-to-Firebase-with-IOS/" rel="prev" title="How to store Image to Firebase in IOS">
-                How to store Image to Firebase in IOS <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -433,10 +309,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -662,10 +534,10 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-
+  
 
   
 
