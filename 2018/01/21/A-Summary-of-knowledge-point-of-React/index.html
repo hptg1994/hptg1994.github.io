@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="React," />
 
 
 
@@ -94,17 +94,20 @@
 
 
 
-<meta name="description" content="Testing on Web API">
+<meta name="description" content="A Summary of knowledge point of React So recently I figure out two way to get the value from &amp;lt;form&amp;gt;one is:1234567891011handleForm(e)&amp;#123;		e.preventDefault();		if(!this.input.value) return fals">
+<meta name="keywords" content="React">
 <meta property="og:type" content="article">
-<meta property="og:title" content="testing on Web API">
-<meta property="og:url" content="http://yoursite.com/2018/01/19/testing-on-Web-API/index.html">
+<meta property="og:title" content="A Summary of knowledge point of React">
+<meta property="og:url" content="http://yoursite.com/2018/01/21/A-Summary-of-knowledge-point-of-React/index.html">
 <meta property="og:site_name" content="Pintaigao He">
-<meta property="og:description" content="Testing on Web API">
+<meta property="og:description" content="A Summary of knowledge point of React So recently I figure out two way to get the value from &amp;lt;form&amp;gt;one is:1234567891011handleForm(e)&amp;#123;		e.preventDefault();		if(!this.input.value) return fals">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-01-19T20:25:01.967Z">
+<meta property="og:image" content="http://yoursite.com/2018/01/21/A-Summary-of-knowledge-point-of-React/image1.png">
+<meta property="og:updated_time" content="2018-01-23T20:48:45.928Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="testing on Web API">
-<meta name="twitter:description" content="Testing on Web API">
+<meta name="twitter:title" content="A Summary of knowledge point of React">
+<meta name="twitter:description" content="A Summary of knowledge point of React So recently I figure out two way to get the value from &amp;lt;form&amp;gt;one is:1234567891011handleForm(e)&amp;#123;		e.preventDefault();		if(!this.input.value) return fals">
+<meta name="twitter:image" content="http://yoursite.com/2018/01/21/A-Summary-of-knowledge-point-of-React/image1.png">
 
 
 
@@ -133,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/19/testing-on-Web-API/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/21/A-Summary-of-knowledge-point-of-React/"/>
 
 
 
 
 
-  <title>testing on Web API | Pintaigao He</title>
+  <title>A Summary of knowledge point of React | Pintaigao He</title>
   
 
 
@@ -272,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/19/testing-on-Web-API/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/21/A-Summary-of-knowledge-point-of-React/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pintaigao He">
@@ -289,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">testing on Web API</h1>
+          <h1 class="post-title" itemprop="name headline">A Summary of knowledge point of React</h1>
         
 
         <div class="post-meta">
@@ -301,8 +304,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-19T15:24:08-05:00">
-                2018-01-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-21T15:26:01-05:00">
+                2018-01-21
               </time>
             
 
@@ -339,7 +342,19 @@
       
 
       
-        <h1 id="Testing-on-Web-API"><a href="#Testing-on-Web-API" class="headerlink" title="Testing on Web API"></a>Testing on Web API</h1>
+        <h1 id="A-Summary-of-knowledge-point-of-React"><a href="#A-Summary-of-knowledge-point-of-React" class="headerlink" title="A Summary of knowledge point of React"></a>A Summary of knowledge point of React</h1><ol>
+<li>So recently I figure out two way to get the value from <code>&lt;form&gt;</code><br>one is:<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">handleForm(e)&#123;</span><br><span class="line">		e.preventDefault();</span><br><span class="line">		<span class="keyword">if</span>(!<span class="keyword">this</span>.input.value) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">let</span> newQuestion = &#123;</span><br><span class="line">			title:<span class="keyword">this</span>.input.value  ,</span><br><span class="line">			description:<span class="keyword">this</span>.textarea.value,</span><br><span class="line">			voteCount:<span class="number">0</span></span><br><span class="line">		&#125;;</span><br><span class="line">		<span class="keyword">this</span>.addQuestionForm.reset()</span><br><span class="line">		<span class="keyword">this</span>.props.onNewQuestion(newQuestion);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>and the HTML parts:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">ref</span>=<span class="string">&#123;formDom</span> =&gt;</span> this.addQuestionForm = formDom &#125; name="addQuestion" className="clearfix" style=&#123;styleObj&#125; onSubmit=&#123;this.handleForm&#125;&gt;</span><br><span class="line">			  <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">			    <span class="tag">&lt;<span class="name">label</span> <span class="attr">htmlFor</span>=<span class="string">"qtitle"</span>&gt;</span>问题<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">			    <span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;title</span> =&gt;</span> this.input = title&#125; type="text" className="form-control" id="qtitle" placeholder="您的问题的标题" name = "qtitle"/&gt;</span><br><span class="line">			  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">			  <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">ref</span>=<span class="string">&#123;description</span> =&gt;</span> this.textarea = description&#125; className="form-control" rows="3" placeholder="问题的描述"&gt;<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>You see the <code>ref</code> properties inside the form and I try to <code>console.log()</code> this properties which giving the output as:</p>
+<center><br><img src="/2018/01/21/A-Summary-of-knowledge-point-of-React/image1.png" alt=""><br></center>
+
+<p>so it pull out the whole form tag and assigned it to the global properties.</p>
+<p><strong>second is:</strong> assigned a name to the tag<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;title</span> =&gt;</span> this.input = title&#125; type="text" className="form-control" id="qtitle" placeholder="您的问题的标题" name="qtitle"/&gt;</span><br></pre></td></tr></table></figure></p>
+<p>So, the value can be accessed by doing<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title:event.target.elements.qtitle.value</span><br></pre></td></tr></table></figure></p>
+<p>   ​</p>
+
       
     </div>
     
@@ -354,6 +369,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/React/" rel="tag"># React</a>
+          
+        </div>
+      
 
       
       
@@ -363,8 +384,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/19/How to do SEO (search engine optimaization)/" rel="next" title="How to do SEO (search engine optimaization)">
-                <i class="fa fa-chevron-left"></i> How to do SEO (search engine optimaization)
+              <a href="/2018/01/21/How-to-store-Image-to-Firebase-with-IOS/" rel="next" title="How to store Image to Firebase in IOS">
+                <i class="fa fa-chevron-left"></i> How to store Image to Firebase in IOS
               </a>
             
           </div>
@@ -373,8 +394,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/19/Q-update-firebase-data/" rel="prev" title="Q:update firebase data">
-                Q:update firebase data <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/21/A-Note-of-Webpack-that-in-my-Project/" rel="prev" title="A Note of Webpack that in my Project">
+                A Note of Webpack that in my Project <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -522,7 +543,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Testing-on-Web-API"><span class="nav-number">1.</span> <span class="nav-text">Testing on Web API</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-Summary-of-knowledge-point-of-React"><span class="nav-number">1.</span> <span class="nav-text">A Summary of knowledge point of React</span></a></li></ol></div>
             
 
           </div>
