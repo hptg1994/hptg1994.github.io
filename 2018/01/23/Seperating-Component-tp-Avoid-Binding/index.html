@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Pintaigao He">
 <meta property="og:description" content="First let’s see a code sample below: 1234567891011121314151617181920212223242526272829303132333435363738394041424344import React from &apos;react&apos;;class App extends React.Component &amp;#123;  constructor() &amp;#">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-01-23T19:16:51.088Z">
+<meta property="og:updated_time" content="2018-01-23T22:46:58.442Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Seperating Component to Avoid Binding">
 <meta name="twitter:description" content="First let’s see a code sample below: 1234567891011121314151617181920212223242526272829303132333435363738394041424344import React from &apos;react&apos;;class App extends React.Component &amp;#123;  constructor() &amp;#">
@@ -341,6 +341,7 @@
       
         <p>First let’s see a code sample below:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      users: [</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">'Cory'</span> &#125;, </span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">name</span>: <span class="string">'Meg'</span> &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  deleteUser = <span class="function"><span class="params">id</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(<span class="function"><span class="params">prevState</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> &#123; <span class="attr">users</span>: prevState.users.filter( <span class="function"><span class="params">user</span> =&gt;</span> user.id !== id)&#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;Users&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">        &lt;ul&gt;</span></span><br><span class="line"><span class="regexp">        &#123; </span></span><br><span class="line"><span class="regexp">          this.state.users.map( user =&gt; &#123;</span></span><br><span class="line"><span class="regexp">            return (</span></span><br><span class="line"><span class="regexp">              &lt;li key=&#123;user.id&#125;&gt;</span></span><br><span class="line"><span class="regexp">                &lt;input </span></span><br><span class="line"><span class="regexp">                  type="button" </span></span><br><span class="line"><span class="regexp">                  value="Delete" </span></span><br><span class="line"><span class="regexp">                  onClick=&#123;() =&gt; this.deleteUser(user.id)&#125; </span></span><br><span class="line"><span class="regexp">                /</span>&gt; </span><br><span class="line">                &#123;user.name&#125;</span><br><span class="line">              &lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">            )</span></span><br><span class="line"><span class="regexp">          &#125;)</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">        &lt;/u</span>l&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">export default App;</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <blockquote>
 <p>Note: I wonder if I can delete the arrow function in the render(onClick = {this.deleteUser(user.id)}),and the console log out:</p>
 <p>Warning: setState(…): Cannot update during an existing state transition (such as within <code>render</code> or another component’s constructor). Render methods should be a pure function of props and state; constructor side-effects are an anti-pattern, but can be moved to <code>componentWillMount</code>.</p>
@@ -464,7 +465,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -475,7 +476,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -486,7 +487,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">tags</span>
               
             </div>
