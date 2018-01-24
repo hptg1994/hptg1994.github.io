@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Pintaigao He">
 <meta property="og:description" content="Q: What issue did React solve? How to create and Design a good component? When will render() being called in Component? Will DOM always refresh and update when render being called? lifecycle of Compon">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-01-24T02:45:42.082Z">
+<meta property="og:updated_time" content="2018-01-24T02:47:20.753Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Interview with React">
 <meta name="twitter:description" content="Q: What issue did React solve? How to create and Design a good component? When will render() being called in Component? Will DOM always refresh and update when render being called? lifecycle of Compon">
@@ -402,15 +402,15 @@
 <li>Seperate logical parts and view parts</li>
 <li>Finally, writing well-orgainized code</li>
 </ul>
-<h3 id="When-will-render-being-called-in-Component"><a href="#When-will-render-being-called-in-Component" class="headerlink" title="When will render() being called in Component?"></a>When will <code>render()</code> being called in Component?</h3><ul>
+<h2 id="When-will-render-being-called-in-Component"><a href="#When-will-render-being-called-in-Component" class="headerlink" title="When will render() being called in Component?"></a>When will <code>render()</code> being called in Component?</h2><ul>
 <li>When the state change(setState)</li>
 <li>When the props change</li>
 <li>There is a componentShouldUpdate Function and the default value is true. As we can rewrite the code and manipulate <code>render()</code></li>
 </ul>
-<h3 id="Will-DOM-always-refresh-and-update-when-render-being-called"><a href="#Will-DOM-always-refresh-and-update-when-render-being-called" class="headerlink" title="Will DOM always refresh and update when render being called?"></a>Will DOM always refresh and update when <code>render</code> being called?</h3><p>Not really</p>
+<h2 id="Will-DOM-always-refresh-and-update-when-render-being-called"><a href="#Will-DOM-always-refresh-and-update-when-render-being-called" class="headerlink" title="Will DOM always refresh and update when render being called?"></a>Will DOM always refresh and update when <code>render</code> being called?</h2><p>Not really</p>
 <p>There are two kinds of DOM in React, when the <code>render()</code> get called, React will re-create a virtual DOM tree according to props or state.Although each time calling will re-generate, it happens on memory, it won’t affect the performance. And the virtual DOM update does not mean that the real DOM update, React uses the diff algorithm to compare the virtual DOM to the real DOM, which find out the smallest part needs to update, and then real DOM will update</p>
 <p>So every time a state change causes the render function to be called but the real page DOM does not necessarily to be changed</p>
-<h3 id="lifecycle-of-Component"><a href="#lifecycle-of-Component" class="headerlink" title="lifecycle of Component"></a>lifecycle of Component</h3><p>Including three stages: Initialization, Updating, Unmouting</p>
+<h2 id="lifecycle-of-Component"><a href="#lifecycle-of-Component" class="headerlink" title="lifecycle of Component"></a>lifecycle of Component</h2><p>Including three stages: Initialization, Updating, Unmouting</p>
 <p><strong>Initializtion</strong></p>
 <ul>
 <li>constructor() : Initiating state and binding </li>
@@ -431,12 +431,12 @@
 <li>componentWillUnmount()</li>
 <li>componentDidMount()</li>
 </ul>
-<h3 id="Which-period-should-handle-remote-data-loading"><a href="#Which-period-should-handle-remote-data-loading" class="headerlink" title="Which period should handle remote data loading?"></a>Which period should handle remote data loading?</h3><ul>
+<h2 id="Which-period-should-handle-remote-data-loading"><a href="#Which-period-should-handle-remote-data-loading" class="headerlink" title="Which period should handle remote data loading?"></a>Which period should handle remote data loading?</h2><ul>
 <li><p><code>componentDidMount()</code>, because it is a async requesting, We want the data being processed after all the componet being rendered, if the data requesting completed before all component are rendered, some of the under rendering Component will not get the new state</p>
 <pre><code>Warning: setState(...): Can only update a mounted or mounting component. This usually means you called setState() on an unmounted component.
 </code></pre></li>
 </ul>
-<h3 id="In-which-life-cycle-the-state-can-be-changed"><a href="#In-which-life-cycle-the-state-can-be-changed" class="headerlink" title="In which life cycle the state can be changed?"></a>In which life cycle the state can be changed?</h3><ul>
+<h2 id="In-which-life-cycle-the-state-can-be-changed"><a href="#In-which-life-cycle-the-state-can-be-changed" class="headerlink" title="In which life cycle the state can be changed?"></a>In which life cycle the state can be changed?</h2><ul>
 <li>componentDidMount and componentDidUpdate</li>
 <li>constructor、componentWillMount will cause error : as show aboved</li>
 <li>setState in componentWillUpdate will cause dead lock</li>
@@ -628,7 +628,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Q"><span class="nav-number">1.</span> <span class="nav-text">Q:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-issue-did-React-solve"><span class="nav-number">2.</span> <span class="nav-text">What issue did React solve?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-create-and-design-a-good-Component"><span class="nav-number">3.</span> <span class="nav-text">How to create and design a good Component</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#When-will-render-being-called-in-Component"><span class="nav-number">3.1.</span> <span class="nav-text">When will render() being called in Component?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Will-DOM-always-refresh-and-update-when-render-being-called"><span class="nav-number">3.2.</span> <span class="nav-text">Will DOM always refresh and update when render being called?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lifecycle-of-Component"><span class="nav-number">3.3.</span> <span class="nav-text">lifecycle of Component</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Which-period-should-handle-remote-data-loading"><span class="nav-number">3.4.</span> <span class="nav-text">Which period should handle remote data loading?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#In-which-life-cycle-the-state-can-be-changed"><span class="nav-number">3.5.</span> <span class="nav-text">In which life cycle the state can be changed?</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Q"><span class="nav-number">1.</span> <span class="nav-text">Q:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What-issue-did-React-solve"><span class="nav-number">2.</span> <span class="nav-text">What issue did React solve?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-create-and-design-a-good-Component"><span class="nav-number">3.</span> <span class="nav-text">How to create and design a good Component</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#When-will-render-being-called-in-Component"><span class="nav-number">4.</span> <span class="nav-text">When will render() being called in Component?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Will-DOM-always-refresh-and-update-when-render-being-called"><span class="nav-number">5.</span> <span class="nav-text">Will DOM always refresh and update when render being called?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lifecycle-of-Component"><span class="nav-number">6.</span> <span class="nav-text">lifecycle of Component</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Which-period-should-handle-remote-data-loading"><span class="nav-number">7.</span> <span class="nav-text">Which period should handle remote data loading?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#In-which-life-cycle-the-state-can-be-changed"><span class="nav-number">8.</span> <span class="nav-text">In which life cycle the state can be changed?</span></a></li></ol></div>
             
 
           </div>
