@@ -94,19 +94,19 @@
 
 
 
-<meta name="description" content="A Summary of knowledge point of React1.So recently I figure out two way to get the value from &amp;lt;form&amp;gt;one is:1234567891011handleForm(e)&amp;#123;	e.preventDefault();	if(!this.input.value) return false">
+<meta name="description" content="A Summary of knowledge point of React1.So recently I figure out two way to get the value from &amp;lt;form&amp;gt; one is:1234567891011handleForm(e)&amp;#123;	e.preventDefault();	if(!this.input.value) return fals">
 <meta name="keywords" content="React">
 <meta property="og:type" content="article">
 <meta property="og:title" content="A Summary of knowledge point of React">
 <meta property="og:url" content="http://yoursite.com/2018/01/21/A-Summary-of-knowledge-point-of-React/index.html">
 <meta property="og:site_name" content="Pintaigao He">
-<meta property="og:description" content="A Summary of knowledge point of React1.So recently I figure out two way to get the value from &amp;lt;form&amp;gt;one is:1234567891011handleForm(e)&amp;#123;	e.preventDefault();	if(!this.input.value) return false">
+<meta property="og:description" content="A Summary of knowledge point of React1.So recently I figure out two way to get the value from &amp;lt;form&amp;gt; one is:1234567891011handleForm(e)&amp;#123;	e.preventDefault();	if(!this.input.value) return fals">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/01/21/A-Summary-of-knowledge-point-of-React/image1.png">
-<meta property="og:updated_time" content="2018-01-23T20:52:52.110Z">
+<meta property="og:updated_time" content="2018-01-29T05:33:13.897Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="A Summary of knowledge point of React">
-<meta name="twitter:description" content="A Summary of knowledge point of React1.So recently I figure out two way to get the value from &amp;lt;form&amp;gt;one is:1234567891011handleForm(e)&amp;#123;	e.preventDefault();	if(!this.input.value) return false">
+<meta name="twitter:description" content="A Summary of knowledge point of React1.So recently I figure out two way to get the value from &amp;lt;form&amp;gt; one is:1234567891011handleForm(e)&amp;#123;	e.preventDefault();	if(!this.input.value) return fals">
 <meta name="twitter:image" content="http://yoursite.com/2018/01/21/A-Summary-of-knowledge-point-of-React/image1.png">
 
 
@@ -364,13 +364,14 @@
       
 
       
-        <h1 id="A-Summary-of-knowledge-point-of-React"><a href="#A-Summary-of-knowledge-point-of-React" class="headerlink" title="A Summary of knowledge point of React"></a>A Summary of knowledge point of React</h1><p>1.So recently I figure out two way to get the value from <code>&lt;form&gt;</code><br>one is:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">handleForm(e)&#123;</span><br><span class="line">	e.preventDefault();</span><br><span class="line">	<span class="keyword">if</span>(!<span class="keyword">this</span>.input.value) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">let</span> newQuestion = &#123;</span><br><span class="line">		title:<span class="keyword">this</span>.input.value  ,</span><br><span class="line">		description:<span class="keyword">this</span>.textarea.value,</span><br><span class="line">		voteCount:<span class="number">0</span></span><br><span class="line">	&#125;;</span><br><span class="line">	<span class="keyword">this</span>.addQuestionForm.reset()</span><br><span class="line">	<span class="keyword">this</span>.props.onNewQuestion(newQuestion);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h1 id="A-Summary-of-knowledge-point-of-React"><a href="#A-Summary-of-knowledge-point-of-React" class="headerlink" title="A Summary of knowledge point of React"></a>A Summary of knowledge point of React</h1><p>1.So recently I figure out two way to get the value from <code>&lt;form&gt;</code></p>
+<h2 id="one-is"><a href="#one-is" class="headerlink" title="one is:"></a><strong>one is:</strong></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">handleForm(e)&#123;</span><br><span class="line">	e.preventDefault();</span><br><span class="line">	<span class="keyword">if</span>(!<span class="keyword">this</span>.input.value) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">let</span> newQuestion = &#123;</span><br><span class="line">		title:<span class="keyword">this</span>.input.value  ,</span><br><span class="line">		description:<span class="keyword">this</span>.textarea.value,</span><br><span class="line">		voteCount:<span class="number">0</span></span><br><span class="line">	&#125;;</span><br><span class="line">	<span class="keyword">this</span>.addQuestionForm.reset()</span><br><span class="line">	<span class="keyword">this</span>.props.onNewQuestion(newQuestion);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>and the HTML parts:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">ref</span>=<span class="string">&#123;formDom</span> =&gt;</span> this.addQuestionForm = formDom &#125; name="addQuestion" className="clearfix" style=&#123;styleObj&#125; onSubmit=&#123;this.handleForm&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">htmlFor</span>=<span class="string">"qtitle"</span>&gt;</span>问题<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;title</span> =&gt;</span> this.input = title&#125; type="text" className="form-control" id="qtitle" placeholder="您的问题的标题" name = "qtitle"/&gt;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">ref</span>=<span class="string">&#123;description</span> =&gt;</span> this.textarea = description&#125; className="form-control" rows="3" placeholder="问题的描述"&gt;<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>You see the <code>ref</code> properties inside the form and I try to <code>console.log()</code> this properties which giving the output as:</p>
 <center><br><img src="/2018/01/21/A-Summary-of-knowledge-point-of-React/image1.png" alt=""><br></center>
 
 <p>so it pull out the whole form tag and assigned it to the global properties.</p>
-<p><strong>second is:</strong> assigned a name to the tag<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;title</span> =&gt;</span> this.input = title&#125; type="text" className="form-control" id="qtitle" placeholder="您的问题的标题" name="qtitle"/&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="second-is-assigned-a-name-to-the-tag"><a href="#second-is-assigned-a-name-to-the-tag" class="headerlink" title="second is: assigned a name to the tag"></a><strong>second is:</strong> assigned a name to the tag</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">ref</span>=<span class="string">&#123;title</span> =&gt;</span> this.input = title&#125; type="text" className="form-control" id="qtitle" placeholder="您的问题的标题" name="qtitle"/&gt;</span><br></pre></td></tr></table></figure>
 <p>So, the value can be accessed by doing<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title:event.target.elements.qtitle.value</span><br></pre></td></tr></table></figure></p>
 <hr>
 <p>   ​</p>
@@ -493,7 +494,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -504,7 +505,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -515,7 +516,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">tags</span>
               
             </div>
@@ -563,7 +564,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-Summary-of-knowledge-point-of-React"><span class="nav-number">1.</span> <span class="nav-text">A Summary of knowledge point of React</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-Summary-of-knowledge-point-of-React"><span class="nav-number">1.</span> <span class="nav-text">A Summary of knowledge point of React</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#one-is"><span class="nav-number">1.1.</span> <span class="nav-text">one is:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#second-is-assigned-a-name-to-the-tag"><span class="nav-number">1.2.</span> <span class="nav-text">second is: assigned a name to the tag</span></a></li></ol></li></ol></div>
             
 
           </div>
