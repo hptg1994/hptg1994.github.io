@@ -102,7 +102,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/01/29/How-To-Collaborate-on-Github-with-Multi-Users/image1.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/01/29/How-To-Collaborate-on-Github-with-Multi-Users/image3.png">
-<meta property="og:updated_time" content="2018-01-29T06:19:26.254Z">
+<meta property="og:updated_time" content="2018-01-29T06:27:35.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How To Collaborate on Github with Multi-Users">
 <meta name="twitter:image" content="http://yoursite.com/2018/01/29/How-To-Collaborate-on-Github-with-Multi-Users/image1.jpg">
@@ -379,11 +379,13 @@
 <p>So now every body comes in and start working on this project(Assume the master branch named <code>master</code>)</p>
 <p>1) if someone needs to develop a new function, he/she need to make a dev branch from the master:<br><code>git checkout -b hptg1994/development</code></p>
 <p>so a new branch create and call <code>hptg1994/development</code></p>
-<p>2) if the master brach encounters a heavy bug and need to be repaired immediately, someone create a new branch and do it:<br><code>git checkout master</code><br><code>git checkout -b    hotfix</code><br><code>..... //fixxing</code><br><code>git merge --no-ff hotfix //quick merge and no need to make comment</code><br><code>git push origin master</code><br>3) now another developer have finished the new component and ready to publish it:<strong>(Assume now the working branch is hptg1994/development)</strong></p>
+<p>2) if the master brach encounters a heavy bug and need to be repaired immediately, someone create a new branch and do it:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git checkout -b	hotfix</span><br><span class="line">..... //fixxing</span><br><span class="line">git merge --no-ff hotfix //quick merge and no need to make comment</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure></p>
+<p>3) now another developer have finished the new component and ready to publish it:<strong>(Assume now the working branch is hptg1994/development)</strong></p>
 <ol>
 <li><p>First : Always checking if any changes on master branch,even it is <code>already up-to-dates</code>( who knows :) )<br><code>git pull origin master hptg1994/development</code><br>pull from (mater) to (hptg1994/development)</p>
 </li>
-<li><p>After change the stuff, add, commit, push on your own branch(dont push on the master branch!!!)<br><code>git add .</code><br><code>git commit -m &quot;what have been change&quot;</code><br><code>git push origin hptg1994/development</code></p>
+<li><p>After change the stuff, add, commit, push on your own branch(dont push on the master branch!!!)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;what have been change&quot;</span><br><span class="line">git push origin hptg1994/development</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>As you may think it is good to merge onto the master branch, go to remote repositories page and do the pull request!</p>
 </li>
