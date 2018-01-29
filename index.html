@@ -373,31 +373,14 @@
 
       
         
-          
-            <center><br><img src="/2018/01/29/How-To-Collaborate-on-Github-with-Multi-Users/image1.jpg" alt=""><br></center><br>&lt;–!more–&gt;<br>So now we start a new project on Github:<br><br><center><br><img src="/2018/01/29/How-To-Collaborate-on-Github-with-Multi-Users/image3.png" alt=""><br></center>
-
-<p>and now clone it to the local storage<br><code>git clone git@github.com:hptg1994/NewTest.git</code></p>
-<p>So now every body comes in and start working on this project(Assume the master branch named <code>master</code>)</p>
-<p>1) if someone needs to develop a new function, he/she need to make a dev branch from the master:<br><code>git checkout -b hptg1994/development</code></p>
-<p>so a new branch create and call <code>hptg1994/development</code></p>
-<p>2) if the master brach encounters a heavy bug and need to be repaired immediately, someone create a new branch and do it:<br><code>git checkout master
- git checkout -b    hotfix
- ..... //fixxing
- git merge --no-ff hotfix //quick merge and no need to make comment
- git push origin master</code><br>and now another developer have finished the new component and ready to publish it:<strong>(Assume now the working branch is hptg1994/development)</strong></p>
-<ol>
-<li><p>First : Always checking if any changes on master branch,even it is <code>already up-to-dates</code>( who knows :) )<br><code>git pull origin master hptg1994/development</code><br>pull from (mater) to (hptg1994/development)</p>
-</li>
-<li><p>After change the stuff, add, commit, push on your own branch(dont push on the master branch!!!)<br><code>git add .
-git commit -m &quot;what have been change&quot;
-git push origin hptg1994/development</code></p>
-</li>
-<li><p>As you may think it is good to merge onto the master branch, go to remote repositories page and do the pull request!</p>
-</li>
-</ol>
-<p><strong>Updating</strong></p>
-
-          
+          <center><br><img src="/2018/01/29/How-To-Collaborate-on-Github-with-Multi-Users/image1.jpg" alt=""><br></center><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/29/How-To-Collaborate-on-Github-with-Multi-Users/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
