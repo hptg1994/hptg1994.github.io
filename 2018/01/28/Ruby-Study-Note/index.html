@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="So recently I am studying Ruby Programming language, here is some code: getmethod:1234567puts &quot;Hi,whats your name?&quot;name = get.chompputs &quot;Great! What&apos;s your age?&quot;age = get.chomp.to_i #to Integerputs &quot;O">
+<meta name="description" content="So recently I am studying Ruby Programming language, here is some code: get:1234567puts &quot;Hi,whats your name?&quot;name = get.chompputs &quot;Great! What&apos;s your age?&quot;age = get.chomp.to_i #to Integerputs &quot;Ok, so">
 <meta name="keywords" content="Ruby">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ruby Study Note">
 <meta property="og:url" content="http://yoursite.com/2018/01/28/Ruby-Study-Note/index.html">
 <meta property="og:site_name" content="Pintaigao He">
-<meta property="og:description" content="So recently I am studying Ruby Programming language, here is some code: getmethod:1234567puts &quot;Hi,whats your name?&quot;name = get.chompputs &quot;Great! What&apos;s your age?&quot;age = get.chomp.to_i #to Integerputs &quot;O">
+<meta property="og:description" content="So recently I am studying Ruby Programming language, here is some code: get:1234567puts &quot;Hi,whats your name?&quot;name = get.chompputs &quot;Great! What&apos;s your age?&quot;age = get.chomp.to_i #to Integerputs &quot;Ok, so">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-01-28T23:18:39.695Z">
+<meta property="og:updated_time" content="2018-01-29T22:16:05.240Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ruby Study Note">
-<meta name="twitter:description" content="So recently I am studying Ruby Programming language, here is some code: getmethod:1234567puts &quot;Hi,whats your name?&quot;name = get.chompputs &quot;Great! What&apos;s your age?&quot;age = get.chomp.to_i #to Integerputs &quot;O">
+<meta name="twitter:description" content="So recently I am studying Ruby Programming language, here is some code: get:1234567puts &quot;Hi,whats your name?&quot;name = get.chompputs &quot;Great! What&apos;s your age?&quot;age = get.chomp.to_i #to Integerputs &quot;Ok, so">
 
 
 
@@ -363,13 +363,32 @@
 
       
         <p>So recently I am studying Ruby Programming language, here is some code:</p>
-<p><code>get</code>method:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">puts <span class="string">"Hi,whats your name?"</span></span><br><span class="line">name = get.chomp</span><br><span class="line">puts <span class="string">"Great! What's your age?"</span></span><br><span class="line"></span><br><span class="line">age = get.chomp.to_i <span class="comment">#to Integer</span></span><br><span class="line"></span><br><span class="line">puts <span class="string">"Ok, so your name is <span class="subst">#&#123;name&#125;</span> and age is <span class="subst">#&#123;age&#125;</span>"</span></span><br></pre></td></tr></table></figure></p>
+<p><strong><code>get</code>:</strong><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">puts <span class="string">"Hi,whats your name?"</span></span><br><span class="line">name = get.chomp</span><br><span class="line">puts <span class="string">"Great! What's your age?"</span></span><br><span class="line"></span><br><span class="line">age = get.chomp.to_i <span class="comment">#to Integer</span></span><br><span class="line"></span><br><span class="line">puts <span class="string">"Ok, so your name is <span class="subst">#&#123;name&#125;</span> and age is <span class="subst">#&#123;age&#125;</span>"</span></span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>what it does is waiting the input on <code>get</code> method and continue process</p>
 </blockquote>
 <hr>
-<p><code>get.chomp</code>: get rid of the line break <code>\n</code></p>
-
+<p><strong><code>get.chomp</code>:</strong> get rid of the line break</p>
+<hr>
+<p><strong><code>.odd</code>,<code>.even</code>:</strong>boolean method,return true od false,using on <code>float</code> number will get error</p>
+<hr>
+<p><strong><code>10.5.floor</code>,<code>10.5.ceiling</code>:</strong>Will become 10 and 11<br><strong><code>10.5.round</code>:</strong>四舍五入<br><strong><code>10.52.round(2)</code>:</strong> start changing from the second dicimal(include second)</p>
+<hr>
+<p><strong><code>Integer.times</code>:</strong><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span>.times&#123;<span class="params">|count|</span> puts <span class="string">"We are on number <span class="subst">#&#123;count&#125;</span>"</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span>.times <span class="keyword">do</span> <span class="params">|count|</span></span><br><span class="line">	puts <span class="string">"We are currently on loop number <span class="subst">#&#123;count&#125;</span>"</span></span><br><span class="line">	puts <span class="string">"I'm having so much fun on learning ruby"</span></span><br><span class="line">	puts <span class="string">"And remember my name is Pintaigao He"</span></span><br><span class="line"><span class="comment"># if you have more than one line code to be executed</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Basically the <code>count</code> are self define variable and <strong>self increase!</strong>, and only usable within this block</p>
+</blockquote>
+<hr>
+<p><strong><code>.upto</code>,<code>.downto</code></strong><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span>.downto(<span class="number">1</span>) &#123;<span class="params">|i|</span> puts <span class="string">"Countdown:<span class="subst">#&#123;i&#125;</span>"</span>&#125;</span><br><span class="line"><span class="comment">#same as above, i will automatically change one by one</span></span><br><span class="line"><span class="number">5</span>.downto(<span class="number">0</span>) <span class="keyword">do</span> <span class="params">|current_number|</span></span><br><span class="line">	puts <span class="string">"We are curretly on <span class="subst">#&#123;current_number&#125;</span>"</span></span><br><span class="line">	puts <span class="string">"Hooray!"</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="number">5</span>.upto(<span class="number">10</span>) <span class="keyword">do</span> <span class="params">|num|</span></span><br><span class="line">	puts <span class="string">"We're moving on up"</span></span><br><span class="line">	puts <span class="string">"We're currently on <span class="subst">#&#123;num&#125;</span>"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<p><strong><code>.step</code></strong><br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.step(<span class="number">100</span>,<span class="number">5</span>)&#123; <span class="params">|number|</span> puts number &#125;</span><br><span class="line"><span class="comment">##step(number,gap#)</span></span><br><span class="line"><span class="number">0</span>.step(<span class="number">85</span>,<span class="number">7</span>) <span class="keyword">do</span> <span class="params">|n|</span></span><br><span class="line">	puts <span class="string">"Alright,let's go up by 7 again"</span></span><br><span class="line">	puts <span class="string">"I'm now on <span class="subst">#&#123;n&#125;</span>"</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">words = &lt;&lt; MLS</span><br><span class="line"><span class="comment">#mutlines words you input in the branch</span></span><br><span class="line">MLS</span><br></pre></td></tr></table></figure>
+<hr>
+<p><code>String.concat(String)</code> : words + words<br><code>String1.prepend(String2)</code> : String2 + String1</p>
+<hr>
+<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3>
       
     </div>
     
@@ -463,8 +482,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avator.png"
@@ -479,7 +507,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -539,6 +567,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Methods"><span class="nav-number">1.</span> <span class="nav-text">Methods</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
