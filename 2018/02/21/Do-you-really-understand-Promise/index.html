@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Question Firebase," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -94,18 +94,14 @@
 
 
 
-<meta name="description" content="So the question is : If I want to update the display name, How to update it ? -Users   -KUanJA9egwmPsJCxXpv       displayName:&amp;quot;Test Trainer&amp;quot;       email:&amp;quot;test@gmail.com&amp;quot;       uid:">
-<meta name="keywords" content="Question Firebase">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Q:update firebase data">
-<meta property="og:url" content="http://yoursite.com/2018/01/19/Q-update-firebase-data/index.html">
+<meta property="og:title" content="Do you really understand Promise">
+<meta property="og:url" content="http://yoursite.com/2018/02/21/Do-you-really-understand-Promise/index.html">
 <meta property="og:site_name" content="Pintaigao He">
-<meta property="og:description" content="So the question is : If I want to update the display name, How to update it ? -Users   -KUanJA9egwmPsJCxXpv       displayName:&amp;quot;Test Trainer&amp;quot;       email:&amp;quot;test@gmail.com&amp;quot;       uid:">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-01-20T02:44:49.560Z">
+<meta property="og:updated_time" content="2018-02-21T17:19:11.547Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Q:update firebase data">
-<meta name="twitter:description" content="So the question is : If I want to update the display name, How to update it ? -Users   -KUanJA9egwmPsJCxXpv       displayName:&amp;quot;Test Trainer&amp;quot;       email:&amp;quot;test@gmail.com&amp;quot;       uid:">
+<meta name="twitter:title" content="Do you really understand Promise">
 
 
 
@@ -134,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/19/Q-update-firebase-data/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/21/Do-you-really-understand-Promise/"/>
 
 
 
 
 
-  <title>Q:update firebase data | Pintaigao He</title>
+  <title>Do you really understand Promise | Pintaigao He</title>
   
 
 
@@ -273,7 +269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/19/Q-update-firebase-data/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/21/Do-you-really-understand-Promise/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pintaigao He">
@@ -290,7 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Q:update firebase data</h1>
+          <h1 class="post-title" itemprop="name headline">Do you really understand Promise</h1>
         
 
         <div class="post-meta">
@@ -302,8 +298,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-19T21:22:23-05:00">
-                2018-01-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-21T12:19:11-05:00">
+                2018-02-21
               </time>
             
 
@@ -340,30 +336,7 @@
       
 
       
-        <p>So the question is :</p>
-<p>If I want to update the display name, How to update it ?</p>
-<pre><code>-Users
-  -KUanJA9egwmPsJCxXpv
-
-     displayName:&quot;Test Trainer&quot;
-
-     email:&quot;test@gmail.com&quot;
-
-     uid: &quot;jRXMsNZHR2exqifnR2rXcceEMxF2&quot;
-</code></pre><p>&lt;–!more–&gt;</p>
-<p>And the answer is : </p>
-<p>If you want to update the displayname of this user</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> db = firebase.database();</span><br><span class="line">db.ref(<span class="string">"-Users/-KUanJA9egwmPsJCxXpv/displayName"</span>).set(<span class="string">"New trainer"</span>);</span><br></pre></td></tr></table></figure>
-<p>equals to</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.ref(<span class="string">"-Users/-KUanJA9egwmPsJCxXpv"</span>).update(&#123; <span class="attr">displayName</span>: <span class="string">"New trainer"</span> &#125;);</span><br></pre></td></tr></table></figure>
-<p>Probably you need to look up the ID first :<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> query db.ref(<span class="string">"-Users"</span>).orderByKey(<span class="string">"uid"</span>).equalTo(<span class="string">"jRXMsNZHR2exqifnR2rXcceEMxF2"</span>);</span><br><span class="line">query.once(<span class="string">"child_added"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">snapshot</span>) </span>&#123;</span><br><span class="line">  snapshot.ref.update(&#123; <span class="attr">displayName</span>: <span class="string">"New trainer"</span> &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>But Here is a better Design of Database(which put the uid as the parent of main content)</p>
-<pre><code>-Users
-  jRXMsNZHR2exqifnR2rXcceEMxF2
-     displayName:&quot;Test Trainer&quot;    
-     email:&quot;test@gmail.com&quot;
-</code></pre><p>Now you can update by :</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> currentUser = firebase.auth().currentUser;</span><br><span class="line">db.ref(<span class="string">"-Users/"</span>+currentUser.uid).update(&#123; <span class="attr">displayName</span>: <span class="string">"New trainer"</span> &#125;);</span><br></pre></td></tr></table></figure>
+        
       
     </div>
     
@@ -378,12 +351,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Question-Firebase/" rel="tag"># Question Firebase</a>
-          
-        </div>
-      
 
       
       
@@ -393,8 +360,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/19/testing-on-Web-API/" rel="next" title="testing on Web API">
-                <i class="fa fa-chevron-left"></i> testing on Web API
+              <a href="/2018/02/20/So-the-question-is-how-to-manage-the-other-reducer-s-state-in-current-reducer/" rel="next" title="So the question is how to manage the other reducer's state in current reducer?">
+                <i class="fa fa-chevron-left"></i> So the question is how to manage the other reducer's state in current reducer?
               </a>
             
           </div>
@@ -402,10 +369,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/21/How-to-store-Image-to-Firebase-with-IOS/" rel="prev" title="How to store Image to Firebase in IOS">
-                How to store Image to Firebase in IOS <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
