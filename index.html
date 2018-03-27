@@ -270,6 +270,138 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/How-to-update-the-child-component-in-React-using-props/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Pintaigao He">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avator.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pintaigao He">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/26/How-to-update-the-child-component-in-React-using-props/" itemprop="url">How to update the child component in React(using props)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-26T21:02:42-04:00">
+                2018-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="How-to-update-the-child-component-in-React-using-props"><a href="#How-to-update-the-child-component-in-React-using-props" class="headerlink" title="How to update the child component in React(using props)"></a>How to update the child component in React(using props)</h1><p>So recently I am writing a Project that to reuse the component which is some kinds of buttons, and this is how I wrote it (within only one file)</p>
+<p>&lt;–!more–&gt;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Buttons</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props)&#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.word = <span class="string">''</span></span><br><span class="line">    <span class="keyword">this</span>.className = <span class="string">''</span></span><br><span class="line">    <span class="keyword">this</span>.img = <span class="string">''</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentWillMount()&#123;</span><br><span class="line">    <span class="keyword">this</span>.wordslibrary(<span class="keyword">this</span>.props.type);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  componentWillReceiveProps(nextProps)&#123;</span><br><span class="line">    <span class="keyword">this</span>.wordslibrary(nextProps.type);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  wordslibrary = <span class="function">(<span class="params">type</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">switch</span> (type) &#123;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">'save-to-collections'</span>:</span><br><span class="line">        <span class="keyword">this</span>.className = <span class="string">'save-buttons'</span>;</span><br><span class="line">        <span class="keyword">this</span>.word = <span class="string">'Save'</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">case</span> <span class="string">'remove-to-collections'</span>:</span><br><span class="line">        <span class="keyword">this</span>.className = <span class="string">'remove-buttons'</span>;</span><br><span class="line">        <span class="keyword">this</span>.word = <span class="string">'Remove'</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; </span><br><span class="line"></span><br><span class="line">  handleButtonsWords = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div className = &#123;<span class="keyword">this</span>.className + <span class="string">'-word-container'</span>&#125; &gt;</span><br><span class="line">        &lt;p&gt;&#123;<span class="keyword">this</span>.word&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">        &#123; this.img != '' &amp;&amp; &lt;img src= &#123;this.img&#125;/</span>&gt; &#125;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  render() &#123;</span></span><br><span class="line"><span class="regexp">    return (</span></span><br><span class="line"><span class="regexp">    &lt;button className = &#123;this.className&#125; onClick = &#123;this.props.onClick&#125;&gt;</span></span><br><span class="line"><span class="regexp">        &#123;this.handleButtonsWords() &#125;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>button&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Buttons;</span><br></pre></td></tr></table></figure>
+<p>and this is how I use it:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Ignore the regular part</span></span><br><span class="line"><span class="keyword">const</span> &#123; collectionName, collectionSavedItems, saved &#125; = <span class="keyword">this</span>.props;</span><br><span class="line"><span class="keyword">const</span> actionButtons = <span class="xml"><span class="tag">&lt;<span class="name">Buttons</span> <span class="attr">type</span> = <span class="string">&#123;saved?</span>'<span class="attr">remove-to-collections</span>'<span class="attr">:</span>'<span class="attr">save-to-collections</span>'&#125; <span class="attr">onClick</span> = <span class="string">&#123;saved?this.deleteItem:this.addItem&#125;/</span>&gt;</span></span></span><br><span class="line">&lt;div className=&#123;buttonContainerClass&#125;&gt;</span><br><span class="line">    &#123; actionButtons &#125;</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>And here come’s the issue: when I click the Buttons(call onClick and change save value), it should render a new Buttons( because saved change ),but in fact, it didn’t, why?</p>
+<p>So I search online, and it said like this:</p>
+<blockquote>
+<p>Passing the intial state to a component as a prop is an anti-pattern because the getInitialState (in our case the constuctor) method is only called the first time the component renders. Never more. Meaning that, if you re-render that component passing a different value as a prop, the component will not react accordingly, because the component will keep the state from the first time it was rendered. It’s very error prone.</p>
+</blockquote>
+<p>which means props is <code>read-only</code>,I can’t change it.</p>
+<p>So if can’t avoid such a situation the ideal solution is to use the method <code>componentWillReceiveProps</code> to listen for new props.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">componentWillReceiveProps(nextProps) &#123;</span><br><span class="line">  <span class="keyword">this</span>.setState(&#123; <span class="attr">data</span>: nextProps.data &#125;);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>And… All good to go</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/21/Do-you-really-understand-Promise/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1417,168 +1549,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/23/Interview-with-React/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Pintaigao He">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avator.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pintaigao He">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/23/Interview-with-React/" itemprop="url">Interview with React</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-23T17:27:45-05:00">
-                2018-01-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Interview/" itemprop="url" rel="index">
-                    <span itemprop="name">Interview</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Interview/React-Redux/" itemprop="url" rel="index">
-                    <span itemprop="name">React&Redux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Q"><a href="#Q" class="headerlink" title="Q:"></a>Q:</h2><ol>
-<li>What issue did React solve?</li>
-<li>How to create and Design a good component?</li>
-<li>When will <code>render()</code> being called in Component?</li>
-<li>Will DOM always refresh and update when <code>render</code> being called?</li>
-<li>lifecycle of Component</li></ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/23/Interview-with-React/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1629,7 +1599,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
