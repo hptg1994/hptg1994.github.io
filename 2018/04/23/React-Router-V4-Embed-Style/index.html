@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="default">
+<html class="theme-next pisces use-motion" lang="default">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -94,19 +94,19 @@
 
 
 
-<meta name="description" content="So recently I do in a Project and it is a Dashboard,something like that:         which need a static page (sidebar header) and only the right area will be truely change (which is a real good example o">
+<meta name="description" content="So recently I do in a Project and it is a Dashboard,something like that:         which need a static page (sidebar header) and only the right area will be truely change(which is a real good example of">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React Router V4 Embed Style">
 <meta property="og:url" content="http://yoursite.com/2018/04/23/React-Router-V4-Embed-Style/index.html">
 <meta property="og:site_name" content="Pintaigao He">
-<meta property="og:description" content="So recently I do in a Project and it is a Dashboard,something like that:         which need a static page (sidebar header) and only the right area will be truely change (which is a real good example o">
+<meta property="og:description" content="So recently I do in a Project and it is a Dashboard,something like that:         which need a static page (sidebar header) and only the right area will be truely change(which is a real good example of">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/04/23/React-Router-V4-Embed-Style/image.png">
 <meta property="og:image" content="http://yoursite.com/2018/04/23/React-Router-V4-Embed-Style/route.png">
-<meta property="og:updated_time" content="2018-04-24T00:48:41.505Z">
+<meta property="og:updated_time" content="2018-04-24T00:55:09.464Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Router V4 Embed Style">
-<meta name="twitter:description" content="So recently I do in a Project and it is a Dashboard,something like that:         which need a static page (sidebar header) and only the right area will be truely change (which is a real good example o">
+<meta name="twitter:description" content="So recently I do in a Project and it is a Dashboard,something like that:         which need a static page (sidebar header) and only the right area will be truely change(which is a real good example of">
 <meta name="twitter:image" content="http://yoursite.com/2018/04/23/React-Router-V4-Embed-Style/image.png">
 
 
@@ -115,7 +115,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Pisces',
     sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
@@ -343,7 +343,7 @@
 
       
         <p>So recently I do in a Project and it is a Dashboard,<br>something like that:</p>
-<p><div style="text-align: center"><br>    <img src="/2018/04/23/React-Router-V4-Embed-Style/image.png" style="width: 60%; "><br></div><br>    which need a static page (sidebar header) and only the right area will be truely change (which is a real good example of embeding <route>)<br><a id="more"></a><br>So I use the following way to write the web Route:</route></p>
+<p><div style="text-align: center"><br>    <img src="/2018/04/23/React-Router-V4-Embed-Style/image.png" style="width: 60%; "><br></div><br>    which need a static page (sidebar header) and only the right area will be truely change(which is a real good example of embeding <route>)<br><a id="more"></a><br>So I use the following way to write the web Route:</route></p>
 <p><div style="text-align: center"><br>    <img src="/2018/04/23/React-Router-V4-Embed-Style/route.png" style="width: 30%; "><br></div><br>Oh so seems like <route> embeded <route> and then embed <route>, which means the sidebar and header need to be static during the whole project, Some of the content in <code>Inventory</code> also need to unchange.<br>So here is the code that how I configure it:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;BrowserRouter&gt;</span><br><span class="line">  &lt;SideBar /&gt;</span><br><span class="line">  &lt;Header /&gt;</span><br><span class="line">  &lt;div className=<span class="string">"dashboard-area"</span>&gt;</span><br><span class="line">    &lt;Switch&gt;</span><br><span class="line">      &lt;Route exact path=<span class="string">"/"</span> &#125; /&gt; <span class="comment">// this is the whole page</span></span><br><span class="line">      &lt;Route path=<span class="string">"/signup"</span> component=&#123;SignUp&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/link-pos"</span> component=&#123;LinkPOS&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/Dashboard"</span> component=&#123;Dashboard&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/Inventory"</span> component=&#123;Inventory&#125; /&gt;</span><br><span class="line">      &lt;Redirect to=<span class="string">"/"</span> /&gt;</span><br><span class="line">    &lt;<span class="regexp">/Switch&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>div&gt;</span><br><span class="line">&lt;<span class="regexp">/BrowserRouter&gt;</span></span><br></pre></td></tr></table></figure></route></route></route></p>
 <p>and as go to the <code>/Inventory</code> page, it contains multiple part, one is the listing of Item, which will be seen as enterying (to = ‘/‘), and when click the item, will show the detail page(to = ‘/:id’)<br>So see the code:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div className = <span class="string">'Inventory'</span>&gt;</span><br><span class="line">  &lt;InventoryHeader /&gt; <span class="comment">// which this is static on Inventory page</span></span><br><span class="line">    &lt;div className = <span class="string">'inventory-router-area'</span>&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/Inventory"</span> exact  render= &#123;() =&gt; dashboardSection&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="string">'/Inventory/1'</span> exact render=&#123;() =&gt; DetailPage&#125; /&gt;</span><br><span class="line">	 &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure></p>
 <p>So, that’s it!</p>
@@ -542,7 +542,7 @@
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
@@ -630,6 +630,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
