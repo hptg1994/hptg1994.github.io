@@ -94,18 +94,19 @@
 
 
 
-<meta name="description" content="Router EmbedSo recently I do in a Project and it is a Dashboard,something like that:         which need a static page (sidebar header) and only the right area will be truely change (which is a real go">
+<meta name="description" content="So recently I do in a Project and it is a Dashboard,something like that:         which need a static page (sidebar header) and only the right area will be truely change (which is a real good example o">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React Router V4 Embed Style">
 <meta property="og:url" content="http://yoursite.com/2018/04/23/React-Router-V4-Embed-Style/index.html">
 <meta property="og:site_name" content="Pintaigao He">
-<meta property="og:description" content="Router EmbedSo recently I do in a Project and it is a Dashboard,something like that:         which need a static page (sidebar header) and only the right area will be truely change (which is a real go">
+<meta property="og:description" content="So recently I do in a Project and it is a Dashboard,something like that:         which need a static page (sidebar header) and only the right area will be truely change (which is a real good example o">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/04/23/React-Router-V4-Embed-Style/image.png">
-<meta property="og:updated_time" content="2018-04-24T00:20:05.900Z">
+<meta property="og:image" content="http://yoursite.com/2018/04/23/React-Router-V4-Embed-Style/route.png">
+<meta property="og:updated_time" content="2018-04-24T00:44:50.642Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Router V4 Embed Style">
-<meta name="twitter:description" content="Router EmbedSo recently I do in a Project and it is a Dashboard,something like that:         which need a static page (sidebar header) and only the right area will be truely change (which is a real go">
+<meta name="twitter:description" content="So recently I do in a Project and it is a Dashboard,something like that:         which need a static page (sidebar header) and only the right area will be truely change (which is a real good example o">
 <meta name="twitter:image" content="http://yoursite.com/2018/04/23/React-Router-V4-Embed-Style/image.png">
 
 
@@ -341,10 +342,19 @@
       
 
       
-        <h1 id="Router-Embed"><a href="#Router-Embed" class="headerlink" title="Router Embed"></a>Router Embed</h1><p>So recently I do in a Project and it is a Dashboard,<br>something like that:</p>
-<p><div style="text-align: center"><br>    <img src="/2018/04/23/React-Router-V4-Embed-Style/image.png" style="width: 40%; "><br></div><br>    which need a static page (sidebar header) and only the right area will be truely change (which is a real good example of embeding <route>)</route></p>
-<pre><code>So
-</code></pre>
+        <p>So recently I do in a Project and it is a Dashboard,<br>something like that:</p>
+<div style="text-align: center"><br>    <img src="/2018/04/23/React-Router-V4-Embed-Style/image.png" style="width: 60%; "><br></div><br>    which need a static page (sidebar header) and only the right area will be truely change (which is a real good example of embeding <route>)<br><a id="more"></a><br>So I use the following way to write the web Route:<br><div style="text-align: center"><br>    <img src="/2018/04/23/React-Router-V4-Embed-Style/route.png"><br></div>
+
+<p>Oh so seems like <route> embeded <route> and then embed <route>, which means the sidebar and header need to be static during the whole project, Some of the content in <code>Inventory</code> also need to unchange.</route></route></route></p>
+<p>So here is the code that how I configure it:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;BrowserRouter&gt;</span><br><span class="line">  &lt;SideBar /&gt;</span><br><span class="line">  &lt;Header /&gt;</span><br><span class="line">  &lt;div className=<span class="string">"dashboard-area"</span>&gt;</span><br><span class="line">    &lt;Switch&gt;</span><br><span class="line">      &lt;Route exact path=<span class="string">"/"</span> &#125; /&gt; <span class="comment">// this is the whole page</span></span><br><span class="line">      &lt;Route path=<span class="string">"/signup"</span> component=&#123;SignUp&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/link-pos"</span> component=&#123;LinkPOS&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/Dashboard"</span> component=&#123;Dashboard&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/Inventory"</span> component=&#123;Inventory&#125; /&gt;</span><br><span class="line">      &lt;Redirect to=<span class="string">"/"</span> /&gt;</span><br><span class="line">    &lt;<span class="regexp">/Switch&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>div&gt;</span><br><span class="line">&lt;<span class="regexp">/BrowserRouter&gt;</span></span><br></pre></td></tr></table></figure>
+<p>and as go to the <code>/Inventory</code> page, it contains multiple part, one is the listing of Item, which will be seen as enterying (to = ‘/‘), and when click the item, will show the detail page(to = ‘/:id’)</p>
+<p>So see the code:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div className = <span class="string">'Inventory'</span>&gt;</span><br><span class="line">  &lt;InventoryHeader /&gt; <span class="comment">// which this is static on Inventory page</span></span><br><span class="line">    &lt;div className = <span class="string">'inventory-router-area'</span>&gt;</span><br><span class="line">      &lt;Route path=<span class="string">"/Inventory"</span> exact  render= &#123;() =&gt; dashboardSection&#125; /&gt;</span><br><span class="line">      &lt;Route path=<span class="string">'/Inventory/1'</span> exact render=&#123;() =&gt; DetailPage&#125; /&gt;</span><br><span class="line">	 &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>So, that’s it!</p>
+<blockquote>
+<p>Note:Be Careful that <code>&lt;Router /&gt;</code> only as one child</p>
+</blockquote>
+</route>
       
     </div>
     
@@ -428,17 +438,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avator.png"
@@ -513,22 +514,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Router-Embed"><span class="nav-number">1.</span> <span class="nav-text">Router Embed</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
