@@ -1,13 +1,13 @@
-.archive .archive-counter {
-  text-align: center;
+.archive-year {
+  color: #333;
+  font-size: 2em;
 }
-.archive .archive-title {
-  text-align: center;
+.archives {
+  padding-left: 1.75em;
 }
-.archive .archive-article {
-  text-align: center;
+.archives a {
+  color: #4a4a4a;
 }
-.archive .archive-article .post-title {
-  padding: 0;
-  margin: 0;
+.archives a:hover {
+  color: #7cc04b;
 }
