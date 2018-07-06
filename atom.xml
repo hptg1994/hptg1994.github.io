@@ -54,20 +54,6 @@
   </entry>
   
   <entry>
-    <title>Do you really understand Promise</title>
-    <link href="http://yoursite.com/2018/02/21/Do-you-really-understand-Promise/"/>
-    <id>http://yoursite.com/2018/02/21/Do-you-really-understand-Promise/</id>
-    <published>2018-02-21T17:19:11.000Z</published>
-    <updated>2018-02-21T17:19:11.548Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>So the question is how to manage the other reducer&#39;s state in current reducer?</title>
     <link href="http://yoursite.com/2018/02/20/So-the-question-is-how-to-manage-the-other-reducer-s-state-in-current-reducer/"/>
     <id>http://yoursite.com/2018/02/20/So-the-question-is-how-to-manage-the-other-reducer-s-state-in-current-reducer/</id>
@@ -114,53 +100,11 @@
   </entry>
   
   <entry>
-    <title>So what is the difference between render and component in React Router &lt;Route&gt;</title>
-    <link href="http://yoursite.com/2018/02/11/So-what-is-the-difference-between-render-and-component-in-React-Router-Route/"/>
-    <id>http://yoursite.com/2018/02/11/So-what-is-the-difference-between-render-and-component-in-React-Router-Route/</id>
-    <published>2018-02-11T22:56:50.000Z</published>
-    <updated>2018-02-11T22:56:50.757Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>posts</title>
     <link href="http://yoursite.com/2018/02/11/posts/"/>
     <id>http://yoursite.com/2018/02/11/posts/</id>
     <published>2018-02-11T22:55:55.000Z</published>
     <updated>2018-02-11T22:55:55.476Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>So,let&#39;s talk about redux and react+redux</title>
-    <link href="http://yoursite.com/2018/02/09/So-let-s-talk-about-redux-and-react-redux/"/>
-    <id>http://yoursite.com/2018/02/09/So-let-s-talk-about-redux-and-react-redux/</id>
-    <published>2018-02-09T21:45:53.000Z</published>
-    <updated>2018-02-09T21:45:53.093Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Some tips about css when I making a Tour Page</title>
-    <link href="http://yoursite.com/2018/02/02/Some-tips-about-css-when-I-making-a-Tour-Page/"/>
-    <id>http://yoursite.com/2018/02/02/Some-tips-about-css-when-I-making-a-Tour-Page/</id>
-    <published>2018-02-02T20:24:14.000Z</published>
-    <updated>2018-02-02T20:24:14.821Z</updated>
     
     <summary type="html">
     
@@ -253,22 +197,6 @@
   </entry>
   
   <entry>
-    <title>The most frequently seen issue in React</title>
-    <link href="http://yoursite.com/2018/01/23/The-most-frequently-seen-issue-in-React/"/>
-    <id>http://yoursite.com/2018/01/23/The-most-frequently-seen-issue-in-React/</id>
-    <published>2018-01-23T20:43:38.000Z</published>
-    <updated>2018-01-23T21:10:12.873Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="React&amp;Redux" scheme="http://yoursite.com/categories/React-Redux/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Seperating Component to Avoid Binding</title>
     <link href="http://yoursite.com/2018/01/23/Seperating-Component-tp-Avoid-Binding/"/>
     <id>http://yoursite.com/2018/01/23/Seperating-Component-tp-Avoid-Binding/</id>
@@ -308,34 +236,6 @@
     
     
       <category term="React" scheme="http://yoursite.com/tags/React/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Deep road of webpack(1) -- path of the image</title>
-    <link href="http://yoursite.com/2018/01/22/Deep-road-of-webpack-1-path-of-the-image/"/>
-    <id>http://yoursite.com/2018/01/22/Deep-road-of-webpack-1-path-of-the-image/</id>
-    <published>2018-01-22T20:40:33.000Z</published>
-    <updated>2018-01-22T20:40:33.930Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>A Note of Webpack that in my Project</title>
-    <link href="http://yoursite.com/2018/01/21/A-Note-of-Webpack-that-in-my-Project/"/>
-    <id>http://yoursite.com/2018/01/21/A-Note-of-Webpack-that-in-my-Project/</id>
-    <published>2018-01-21T21:34:29.000Z</published>
-    <updated>2018-01-21T21:34:29.101Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
@@ -412,6 +312,49 @@
     
     
       <category term="Question Firebase" scheme="http://yoursite.com/tags/Question-Firebase/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to do SEO (search engine optimaization)</title>
+    <link href="http://yoursite.com/2018/01/19/How%20to%20do%20SEO%20(search%20engine%20optimaization)/"/>
+    <id>http://yoursite.com/2018/01/19/How to do SEO (search engine optimaization)/</id>
+    <published>2018-01-19T06:06:48.000Z</published>
+    <updated>2018-01-19T06:08:31.815Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Up-Coming-Topic-How-to-Do-SEO"><a href="#Up-Coming-Topic-How-to-Do-SEO" class="headerlink" title="Up Coming Topic : How to Do SEO"></a>Up Coming Topic : How to Do SEO</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Up-Coming-Topic-How-to-Do-SEO&quot;&gt;&lt;a href=&quot;#Up-Coming-Topic-How-to-Do-SEO&quot; class=&quot;headerlink&quot; title=&quot;Up Coming Topic : How to Do SEO&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>why we should use Redux in React</title>
+    <link href="http://yoursite.com/2018/01/17/Redux/"/>
+    <id>http://yoursite.com/2018/01/17/Redux/</id>
+    <published>2018-01-18T01:46:45.000Z</published>
+    <updated>2018-01-18T19:59:48.620Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Why-We-Should-Use"><a href="#Why-We-Should-Use" class="headerlink" title="Why We Should Use"></a>Why We Should Use</h1><p>The Idea of developing everythings in Component released the hard working on operation on DOM. For React, everything is state, through the state can control the view changes. But as the project keeping expends and mroe and more function are intergrated in, many states become so unmanageable that as different components trigger changes in the same state and lead to updates to the view, we may not know exactly what happened and state changes have become somewhat unpredictable and not Controlled, Redux came into being, limiting the timing and manner of stateful updates through the practice and enhancement of Flux thinking, and Redux attempted to make state changes predictable.</p><a id="more"></a><h2 id="Three-Principles-of-Redux"><a href="#Three-Principles-of-Redux" class="headerlink" title="Three Principles of Redux"></a>Three Principles of Redux</h2><h3 id="1-Single-data-source"><a href="#1-Single-data-source" class="headerlink" title="1. Single data source."></a>1. Single data source.</h3><p>The applications only have the single data source, the entire state of the application are stored in an object, which providing the persistence of extracting the status for entire application.Mean while,       <code>combineReducers</code> (Redux API) provides a efficiently solution for dealing with large data sources</p><h3 id="2-Read-only-State"><a href="#2-Read-only-State" class="headerlink" title="2.Read only State"></a>2.Read only State</h3><p>In Redux, we change the state through <code>reducer</code> instead of <code>setState()</code> and depending on the type of action which being triggered . <code>reducer(previousState, action) =&gt; newState</code></p><h3 id="3-Using-Pure-function-to-complete-the-change-of-state"><a href="#3-Using-Pure-function-to-complete-the-change-of-state" class="headerlink" title="3.Using Pure function to complete the change of state"></a>3.Using Pure function to complete the change of state</h3><p>Using <code>reducer</code> to complete the state change, <strong>every reducer is a pure function</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Why-We-Should-Use&quot;&gt;&lt;a href=&quot;#Why-We-Should-Use&quot; class=&quot;headerlink&quot; title=&quot;Why We Should Use&quot;&gt;&lt;/a&gt;Why We Should Use&lt;/h1&gt;&lt;p&gt;The Idea of developing everythings in Component released the hard working on operation on DOM. For React, everything is state, through the state can control the view changes. But as the project keeping expends and mroe and more function are intergrated in, many states become so unmanageable that as different components trigger changes in the same state and lead to updates to the view, we may not know exactly what happened and state changes have become somewhat unpredictable and not Controlled, Redux came into being, limiting the timing and manner of stateful updates through the practice and enhancement of Flux thinking, and Redux attempted to make state changes predictable.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="React&amp;Redux" scheme="http://yoursite.com/categories/React-Redux/"/>
+    
+    
+      <category term="React Redux" scheme="http://yoursite.com/tags/React-Redux/"/>
     
   </entry>
   

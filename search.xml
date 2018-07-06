@@ -21,15 +21,6 @@
     </entry>
     
     <entry>
-      <title>Do you really understand Promise</title>
-      <link href="/2018/02/21/Do-you-really-understand-Promise/"/>
-      <url>/2018/02/21/Do-you-really-understand-Promise/</url>
-      <content type="html"><![CDATA[]]></content>
-      
-      
-    </entry>
-    
-    <entry>
       <title>So the question is how to manage the other reducer&#39;s state in current reducer?</title>
       <link href="/2018/02/20/So-the-question-is-how-to-manage-the-other-reducer-s-state-in-current-reducer/"/>
       <url>/2018/02/20/So-the-question-is-how-to-manage-the-other-reducer-s-state-in-current-reducer/</url>
@@ -54,36 +45,9 @@
     </entry>
     
     <entry>
-      <title>So what is the difference between render and component in React Router &lt;Route&gt;</title>
-      <link href="/2018/02/11/So-what-is-the-difference-between-render-and-component-in-React-Router-Route/"/>
-      <url>/2018/02/11/So-what-is-the-difference-between-render-and-component-in-React-Router-Route/</url>
-      <content type="html"><![CDATA[]]></content>
-      
-      
-    </entry>
-    
-    <entry>
       <title>posts</title>
       <link href="/2018/02/11/posts/"/>
       <url>/2018/02/11/posts/</url>
-      <content type="html"><![CDATA[]]></content>
-      
-      
-    </entry>
-    
-    <entry>
-      <title>So,let&#39;s talk about redux and react+redux</title>
-      <link href="/2018/02/09/So-let-s-talk-about-redux-and-react-redux/"/>
-      <url>/2018/02/09/So-let-s-talk-about-redux-and-react-redux/</url>
-      <content type="html"><![CDATA[]]></content>
-      
-      
-    </entry>
-    
-    <entry>
-      <title>Some tips about css when I making a Tour Page</title>
-      <link href="/2018/02/02/Some-tips-about-css-when-I-making-a-Tour-Page/"/>
-      <url>/2018/02/02/Some-tips-about-css-when-I-making-a-Tour-Page/</url>
       <content type="html"><![CDATA[]]></content>
       
       
@@ -161,21 +125,6 @@
     </entry>
     
     <entry>
-      <title>The most frequently seen issue in React</title>
-      <link href="/2018/01/23/The-most-frequently-seen-issue-in-React/"/>
-      <url>/2018/01/23/The-most-frequently-seen-issue-in-React/</url>
-      <content type="html"><![CDATA[]]></content>
-      
-      <categories>
-          
-          <category> React&amp;Redux </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    <entry>
       <title>Seperating Component to Avoid Binding</title>
       <link href="/2018/01/23/Seperating-Component-tp-Avoid-Binding/"/>
       <url>/2018/01/23/Seperating-Component-tp-Avoid-Binding/</url>
@@ -196,24 +145,6 @@
             <tag> React </tag>
             
         </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Deep road of webpack(1) -- path of the image</title>
-      <link href="/2018/01/22/Deep-road-of-webpack-1-path-of-the-image/"/>
-      <url>/2018/01/22/Deep-road-of-webpack-1-path-of-the-image/</url>
-      <content type="html"><![CDATA[]]></content>
-      
-      
-    </entry>
-    
-    <entry>
-      <title>A Note of Webpack that in my Project</title>
-      <link href="/2018/01/21/A-Note-of-Webpack-that-in-my-Project/"/>
-      <url>/2018/01/21/A-Note-of-Webpack-that-in-my-Project/</url>
-      <content type="html"><![CDATA[]]></content>
-      
       
     </entry>
     
@@ -265,15 +196,6 @@
             <tag> Question Firebase </tag>
             
         </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>testing on Web API</title>
-      <link href="/2018/01/19/testing-on-Web-API/"/>
-      <url>/2018/01/19/testing-on-Web-API/</url>
-      <content type="html"><![CDATA[<h1 id="Testing-on-Web-API"><a href="#Testing-on-Web-API" class="headerlink" title="Testing on Web API"></a>Testing on Web API</h1>]]></content>
-      
       
     </entry>
     
