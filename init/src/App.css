@@ -138,3 +138,88 @@ a {
     grid-template-columns: repeat(1,1fr);
   }
 }
+
+
+/* About My Self Section */
+.AboutMySelf-Section {
+  width: 100%;
+  background-color: #F1F3F5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AboutMySelf-Detail {
+  
+}
+
+.AboutMySelf-Detail p:first-child {
+  font-weight: 100;
+  position: relative;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.AboutMySelf-Detail p:first-child::after {
+  display: block;
+  content: ' ';
+  position: absolute;
+  background: #a0d952;
+  width: 120px;
+  height: 1px;
+  bottom: -10px;
+}
+
+.p-CONTACT_DETAILS {
+  font-weight: 300;
+  font-size: 20px;
+  margin:10px 0px 10px 0px;
+}
+
+.AboutMySelf-Detail-info{
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.AboutMySelf-Detail-info p{
+  margin:10px 0px 10px 20px;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.AboutMySelf-Detail-info i{
+}
+
+.social-group {
+  list-style: none;
+  margin: 10px 0 0 10px;
+  padding: 0;
+  display: block;
+}
+
+.social-group li {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.social-group li a{
+  background-color: transparent;
+}
+
+.social-group li a img {
+  width: 40px;
+}
+
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.footer p {
+  font-weight: 100;
+  color: #486791
+}

@@ -53,7 +53,7 @@ class App extends Component {
         </div>
       </div>
       <div className="Cards">
-        <h2> 11 course, more coming</h2>
+        <h2>Projects being developed</h2>
         <div className="CardGroup">
           <Card title="Design System" text="10 section" image={require("./images/wallpaper.jpg")} />
           <Card title="React for Designer" text="12 section" image={require("./images/wallpaper2.jpg")} />
@@ -61,6 +61,41 @@ class App extends Component {
           <Card title="ARKit 2" text="10 section" image={require("./images/wallpaper4.jpg")} />
         </div>
       </div>
+
+      <section className = "AboutMySelf-Section">
+        <div className = "AboutMySelf-Detail">
+          <p>Get in touch</p>
+          <p className = "p-CONTACT_DETAILS">CONTACT DETAILS</p>
+          <div className = "AboutMySelf-Detail-info">
+            <i class="material-icons">location_on</i>
+            <p>Austin, TX</p>
+          </div>
+          <div className = "AboutMySelf-Detail-info">
+            <i class="material-icons">email</i>
+            <p>hptg1994@gmail.com</p>
+          </div> 
+          <div className = "AboutMySelf-Detail-info">
+            <i class="material-icons">phone</i>
+            <p>201-844-3982</p>
+          </div> 
+          <p className = "p-CONTACT_DETAILS">SOCIAL</p> 
+          <ul className = 'social-group'>
+            <li>
+              <a href="https://www.linkedin.com/in/pintaigao-he-20a067138/">
+                <img src={require("./images/social/linkedin.png")} alt="linkedin-logo"/>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/hptg1994/">
+                <img src={require("./images/social/github.png")} alt="github-logo"/>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className = "footer">
+          <p>Created By Pintaigao</p>
+        </div>
+      </section>
       {/* <Section image={require("../images/wallpaper2.jpg")} logo={require("../images/logo-react.png")} title="React for Designer" text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify " />
       <SectionCaption>12 section - 6 hours</SectionCaption> */}
       {/* <SectionCellGroup>
