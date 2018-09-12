@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import Card from './components/Card';
-import Section from './components/Section';
+// import Section from './components/Section';
 import Wave from './components/Wave';
 import Header from './components/header'
-import Cell from './components/Cell';
-import styled from 'styled-components'
+import Resume from './components/ResumeSection/Resume';
+// import Cell from './components/Cell';
 
 class App extends Component {
   render() {
@@ -16,7 +16,7 @@ class App extends Component {
         <div className="HeaderGroup">
           <h1>Pintaigao He<br/><span>The webdeveloper</span></h1>
           <div className = "Header-subtitle">
-            <p>#Frontend</p>          
+            <p>#Full Stack</p>          
             <p>#React</p>          
             <p>#Flutter</p>          
             <p>#Spring</p>          
@@ -24,34 +24,41 @@ class App extends Component {
           </div>
           <div className="Logos">
             <div>
-            <img src={require("./images/logo-js.png")}  height="50" />
-            <img src={require("./images/logo-python.png")}  height="50" />
-            <img src={require("./images/logo-java.png")}  height="50" />
-            <img src={require("./images/logo-sketch.png")}  height="50" />
-            <img src={require("./images/logo-zeplin.png")}  height="50" />
-            <img src={require("./images/logo-django.png")}  height="50" />
-            <img src={require("./images/logo-vscode.png")}  height="50" />
-            <img src={require("./images/logo-idea.png")}  height="50" />
-            <img src={require("./images/logo-webstorm.png")}  height="50" />
-            <img src={require("./images/logo-android-studio.png")}  height="50" />
-            <img src={require("./images/logo-react.png")}  height="50" />
-            <img src={require("./images/logo-vue.png")}  height="50" />
-            <img src={require("./images/logo-angular.png")}  height="50" />
-            <img src={require("./images/logo-flutter.png")}  height="50" />
-            <img src={require("./images/logo-dart.png")}  height="50" />
-            <img src={require("./images/logo-firebase.png")}  height="50" />
-            <img src={require("./images/logo-swift.png")}  height="50" />
-            <img src={require("./images/logo-xcode.png")}  height="50" />
-            <img src={require("./images/logo-rails.png")}  height="50" />
-            <img src={require("./images/logo-spring.png")}  height="50" />
-            <img src={require("./images/logo-postgres.png")}  height="50" />
-            <img src={require("./images/logo-teamsql.png")}  height="50" />
-            <img src={require("./images/logo-mysql.png")}  height="50" />
+            <img src={require("./images/logo-js.png")} height="50"  alt ="js-logo"/>
+            <img src={require("./images/logo-python.png")}  height="50"  alt ="python-logo"/>
+            <img src={require("./images/logo-java.png")}  height="50"  alt ="java-logo"/>
+            <img src={require("./images/logo-dart.png")}  height="50" alt ="dart-logo" />
+            <img src={require("./images/logo-swift.png")}  height="50"  alt ="swift-logo"/>
+            <img src={require("./images/logo-react.png")}  height="50"  alt ="react-logo"/>
+            <img src={require("./images/logo-redux.png")}  height="50"  alt ="redux-logo"/>
+            <img src={require("./images/logo-vue.png")}  height="50"  alt ="vue-logo"/>
+            <img src={require("./images/logo-angular.png")}  height="50"  alt ="angular-logo"/>
+            <img src={require("./images/logo-flutter.png")}  height="50"  alt ="flutter-logo"/>
+            <img src={require("./images/logo-django.png")}  height="50"  alt ="django-logo"/>
+            <img src={require("./images/logo-spring.png")}  height="50"  alt ="spring-logo"/>
+            <img src={require("./images/logo-rails.png")}  height="50"  alt ="rails-logo"/>
+            <img src={require("./images/logo-firebase.png")}  height="50"  alt ="firebase-logo"/>
+            <img src={require("./images/logo-postgres.png")}  height="50"  alt ="postgres-logo"/>
+            <img src={require("./images/logo-mysql.png")}  height="50"  alt ="mysql-logo"/>
+            <img src={require("./images/logo-teamsql.png")}  height="50"  alt ="teamsql-logo"/>
+            <img src={require("./images/logo-xcode.png")}  height="50"  alt ="xcode-logo"/>
+            <img src={require("./images/logo-vscode.png")}  height="50"  alt ="vscode-logo"/>
+            <img src={require("./images/logo-idea.png")}  height="50"  alt ="idea-logo"/>
+            <img src={require("./images/logo-webstorm.png")}  height="50"  alt ="webstorm-logo"/>
+            <img src={require("./images/logo-android-studio.png")}  height="50"  alt ="android-studio-logo"/>
+            <img src={require("./images/logo-sketch.png")}  height="50"  alt ="sketch-logo"/>
+            <img src={require("./images/logo-zeplin.png")}  height="50"  alt ="zeplin-logo"/>
+            <img src={require("./images/logo-git.png")}  height="50"  alt ="git-logo"/>
             </div>
           </div>
           <Wave />
         </div>
       </div>
+
+      <div className = "Resume-Section">
+        <Resume />
+      </div>
+
       <div className="Cards">
         <h2>Projects being developed</h2>
         <div className="CardGroup">
@@ -67,15 +74,15 @@ class App extends Component {
           <p>Get in touch</p>
           <p className = "p-CONTACT_DETAILS">CONTACT DETAILS</p>
           <div className = "AboutMySelf-Detail-info">
-            <i class="material-icons">location_on</i>
+            <i className="material-icons">location_on</i>
             <p>Austin, TX</p>
           </div>
           <div className = "AboutMySelf-Detail-info">
-            <i class="material-icons">email</i>
+            <i className="material-icons">email</i>
             <p>hptg1994@gmail.com</p>
           </div> 
           <div className = "AboutMySelf-Detail-info">
-            <i class="material-icons">phone</i>
+            <i className="material-icons">phone</i>
             <p>201-844-3982</p>
           </div> 
           <p className = "p-CONTACT_DETAILS">SOCIAL</p> 

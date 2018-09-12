@@ -13,7 +13,7 @@ a {
 
 .Header {
   background: url("./images/wallpaper3.jpg");
-  height: 1000px;
+  height: 950px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -21,7 +21,7 @@ a {
 
 .HeaderGroup {
   margin: 0 auto;
-  padding:200px 50px;
+  padding:140px 50px;
   text-align: center;
 }
 
@@ -30,7 +30,7 @@ a {
   margin: 0;
   color:white;
   font-size: 60px;
-  line-height: 1.2;
+  line-height: 1.4;
   opacity: 0;
   animation: HeroAnimation 2s 0.3s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -97,9 +97,9 @@ a {
 
 .Header .Logos div {
   display: grid;
-  grid-template-columns: repeat(7,1fr);
+  grid-template-columns: repeat(9,1fr);
   grid-gap: 40px;
-  margin: 50px auto;
+  margin: 30px auto;
   justify-items: center;
 }
 
@@ -108,6 +108,28 @@ a {
     grid-template-columns: repeat(3,1fr)
   }
 }
+
+
+/* Resume Section */
+.Resume-Section {
+  padding: 40px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.Resume-Section::after{
+  display: block;
+  content: ' ';
+  position: absolute;
+  background:rgba(83, 52, 245,0.2);
+  width: 60%;
+  height: 1px;
+  bottom: -10px;
+}
+
+/* Card Section */
 
 .Cards h2 {
   margin: 50px 20px;
@@ -214,12 +236,15 @@ a {
 
 
 .footer {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
 
 .footer p {
+  font-size: 15px;
   font-weight: 100;
+  letter-spacing: 1.5px;
   color: #486791
 }
