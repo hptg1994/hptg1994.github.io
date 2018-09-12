@@ -1,0 +1,81 @@
+.resume {
+}
+
+.resume-section {
+  display: flex;
+  width: 500px; 
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+
+.resume-section p {
+  font-size: 25px;
+  font-weight: 300;
+  color: #7a7a7a;
+  cursor: pointer;
+  margin: 0px 0px 20px 0px;
+  transition: 0.5s
+}
+
+.resume-section p:hover {
+  color: #2d2d2d;
+}
+
+/* Resume Detail */
+.resume-detail {
+  width: 500px;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.resume-detail-left {
+  width: 26%;
+  border-right: 1px solid #3436E7;
+}
+
+.resume-detail-left p {
+  font-size: 16px;
+  font-weight: 100;
+  background-color: #3436E7;
+  padding:10px 13px;
+  color: aliceblue;
+  margin: 0px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.resume-detail-right {
+  width: 74%;
+  margin-left: 20px;
+  text-align: center;
+  align-self: center;
+}
+
+.resume-detail-right p {
+  font-size: 18px;
+  font-family: 'Raleway';
+  font-weight: bold;
+  margin: 0px;
+}
+
+.resume-education p,
+.resume-experience p {
+  padding: 3px 0px;
+  margin: 0px;
+}
+
+.resume-education p:nth-child(2),
+.resume-experience p:nth-child(2){
+  font-size: 20px;
+  font-size: 600;
+}
+
+.resume-education p:first-child,.resume-education p:nth-child(3), 
+.resume-experience p:nth-child(3) {
+  font-weight: 300;
+  font-size: 16px;
+  color: #999999
+}
+
+.resume-experience p:first-child {
+  font-weight: 200;
+}
