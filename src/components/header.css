@@ -1,4 +1,4 @@
-.Header {
+.Navigator {
   position: fixed;
   width: 100%;
   padding: 50px 0px;
@@ -6,13 +6,13 @@
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)
 }
 
-.HeaderScrolled {
+.NavigatorScrolled {
   background: rgba(0, 0, 0, 0.8);
-  padding: 15px 0px;
+  padding: 2px 0px;
   backdrop-filter: blur(20px);
 }
 
-.HeaderGroup {
+.NavigatorGroup {
   max-width: 800px;
   margin: 0 auto;
   display: grid;
@@ -21,18 +21,18 @@
   align-items: center;
 }
 
-.Header a {
+.Navigator p {
   color: white;
   font-weight: 700;
 }
 
-.Header button:hover {
+.Navigator button:hover {
   background: white;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   transform: translateY(-3px);
 }
 
-.Header button {
+.Navigator button {
   padding: 8px 20px;
   font-size: 20px;
   background-color: #56ccf2;
@@ -45,14 +45,14 @@
 }
 
 @media(max-width:640px){
-  .Header {
+  .Navigator {
     padding:15px 0; 
   }
-  .HeaderGroup{
+  .NavigatorGroup{
     grid-template-columns: repeat(4,auto);
   }
 
-  .Header a:nth-child(4) {
+  .Navigator p:nth-child(4) {
     display: none;
   }
 }
