@@ -13,7 +13,7 @@ a {
 
 .Header {
   background: url("./images/wallpaper3.jpg");
-  height: 950px;
+  height: 920px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -112,7 +112,7 @@ a {
 
 /* Resume Section */
 .Resume-Section {
-  padding: 40px 0px;
+  padding: 0px 0px 20px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,10 +129,27 @@ a {
   bottom: -10px;
 }
 
-/* Card Section */
+.Cards {
+  cursor: pointer;
+  position: relative;
+  padding: 20px 0px 0px 0px;
+  margin: 0px auto;
+}
 
+.Cards::after {
+  display: block;
+  content: ' ';
+  position: absolute;
+  background:rgba(83, 52, 245,0.2);
+  width: 60%;
+  left:20%;
+  display: inline-block;
+  height: 1px;
+}
+
+/* Card Section */
 .Cards h2 {
-  margin: 50px 20px;
+  margin: 30px 20px;
   font-size: 60px;
   text-align: center;
   font-weight: 700px;

@@ -5,6 +5,9 @@ import Card from './components/Card';
 import Wave from './components/Wave';
 import Header from './components/header'
 import Resume from './components/ResumeSection/Resume';
+import Projects_Viafly_Dashboard from './components/Projects/Projects-Viafly-Dashboard';
+import Projects_Viafly_Marketplace from './components/Projects/Projects-Viafly-Marketplace';
+import Projects_Expensify from './components/Projects/Projects-Expensify';
 // import Cell from './components/Cell';
 
 class App extends Component {
@@ -62,11 +65,17 @@ class App extends Component {
       <div className="Cards">
         <h2>Projects being developed</h2>
         <div className="CardGroup">
-          <Card title="Design System" text="10 section" image={require("./images/wallpaper.jpg")} />
-          <Card title="React for Designer" text="12 section" image={require("./images/wallpaper2.jpg")} />
-          <Card title="Sound Design" text="5 section" image={require("./images/wallpaper3.jpg")} />
-          <Card title="ARKit 2" text="10 section" image={require("./images/wallpaper4.jpg")} />
+          <Card title="Viafly Marketplace" text="Jan 2018 ~ Now" image={require("./images/wallpaper.jpg")} />
+          <Card title="Viafly Dashboard" text="March 2018 ~ Now" image={require("./images/wallpaper2.jpg")} />
+          <Card title="Expensify" text="Oct ~ Dec 2017" image={require("./images/wallpaper3.jpg")} />
+          <Card title="Viafly Mobile Client" text="March 2018 ~ Now" image={require("./images/wallpaper4.jpg")} />
         </div>
+      </div>
+
+      <div className="Projects">
+        <Projects_Viafly_Marketplace />
+        <Projects_Viafly_Dashboard />
+        <Projects_Expensify />
       </div>
 
       <section className = "AboutMySelf-Section">
