@@ -29,7 +29,7 @@ class Header extends React.Component {
           <p>Home</p>
           <p>Resume</p>
           <p>Projects</p>
-          <p><button>Contact</button></p>
+          <button>Contact</button>
         </div>
       </div>
     )
