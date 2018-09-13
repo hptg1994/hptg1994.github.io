@@ -63,7 +63,7 @@ class App extends Component {
       </div>
 
       <div className="Cards">
-        <h2>Projects being developed</h2>
+        <h2>Projects Presently Developing</h2>
         <div className="CardGroup">
           <Card title="Viafly Marketplace" text="Jan 2018 ~ Now" image={require("./images/wallpaper.jpg")} />
           <Card title="Viafly Dashboard" text="March 2018 ~ Now" image={require("./images/wallpaper2.jpg")} />
