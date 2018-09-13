@@ -109,7 +109,7 @@ class App extends Component {
           </ul>
         </div>
         <div className = "footer">
-          <p>Created By Pintaigao&copy</p>
+          <p>Created By Pintaigao&copy;</p>
         </div>
       </section>
     </div >
