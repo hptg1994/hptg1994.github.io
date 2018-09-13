@@ -109,16 +109,9 @@ class App extends Component {
           </ul>
         </div>
         <div className = "footer">
-          <p>Created By Pintaigao</p>
+          <p>Created By Pintaigao&copy</p>
         </div>
       </section>
-      {/* <Section image={require("../images/wallpaper2.jpg")} logo={require("../images/logo-react.png")} title="React for Designer" text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify " />
-      <SectionCaption>12 section - 6 hours</SectionCaption> */}
-      {/* <SectionCellGroup>
-        {staticdata.cells.map(cell => (
-          <Cell title={cell.title} image={cell.image} />
-        ))}
-      </SectionCellGroup> */}
     </div >
     );
   }
