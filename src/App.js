@@ -34,6 +34,7 @@ class App extends Component {
             <img src={require("./images/logo-swift.png")}  height="50"  alt ="swift-logo"/>
             <img src={require("./images/logo-react.png")}  height="50"  alt ="react-logo"/>
             <img src={require("./images/logo-redux.png")}  height="50"  alt ="redux-logo"/>
+            <img src={require("./images/logo-electron.png")}  height="50"  alt ="redux-logo"/>
             <img src={require("./images/logo-vue.png")}  height="50"  alt ="vue-logo"/>
             <img src={require("./images/logo-angular.png")}  height="50"  alt ="angular-logo"/>
             <img src={require("./images/logo-flutter.png")}  height="50"  alt ="flutter-logo"/>
