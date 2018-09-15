@@ -26,6 +26,7 @@ class Header extends React.Component {
     return (
       <div className={this.state.hasScrolled ? "Navigator NavigatorScrolled" : "Navigator"}>
         <div className="NavigatorGroup">
+        <img src={require("../images/title.gif")} alt="" height = "40px"/>
           <p>Home</p>
           <p>Resume</p>
           <p>Projects</p>

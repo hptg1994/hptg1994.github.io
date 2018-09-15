@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.fa62d2b0.css",
   "main.css.map": "static/css/main.fa62d2b0.css.map",
-  "main.js": "static/js/main.3e947c81.js",
-  "main.js.map": "static/js/main.3e947c81.js.map",
+  "main.js": "static/js/main.9888a638.js",
+  "main.js.map": "static/js/main.9888a638.js.map",
   "static/media/expensify-web.png": "static/media/expensify-web.bbbdab64.png",
   "static/media/github.png": "static/media/github.957c4dd9.png",
   "static/media/logo-android-studio.png": "static/media/logo-android-studio.e8c68356.png",
@@ -25,6 +25,7 @@
   "static/media/logo-webstorm.png": "static/media/logo-webstorm.0fa98f28.png",
   "static/media/logo-xcode.png": "static/media/logo-xcode.c9886bfa.png",
   "static/media/logo-zeplin.png": "static/media/logo-zeplin.d2d08668.png",
+  "static/media/timer-electron.png": "static/media/timer-electron.d27512f6.png",
   "static/media/viafly-dashboard.png": "static/media/viafly-dashboard.822fd07a.png",
   "static/media/viafly-marketplace.png": "static/media/viafly-marketplace.e6a56a6d.png",
   "static/media/wallpaper.jpg": "static/media/wallpaper.d737c672.jpg",
