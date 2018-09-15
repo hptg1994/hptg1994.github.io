@@ -8,6 +8,7 @@ import Resume from './components/ResumeSection/Resume';
 import Projects_Viafly_Dashboard from './components/Projects/Projects-Viafly-Dashboard';
 import Projects_Viafly_Marketplace from './components/Projects/Projects-Viafly-Marketplace';
 import Projects_Expensify from './components/Projects/Projects-Expensify';
+import Projects_Timer from './components/Projects/Projects-Timer-Electron';
 // import Cell from './components/Cell';
 
 class App extends Component {
@@ -77,6 +78,7 @@ class App extends Component {
         <Projects_Viafly_Marketplace />
         <Projects_Viafly_Dashboard />
         <Projects_Expensify />
+        <Projects_Timer />
       </div>
 
       <section className = "AboutMySelf-Section">
