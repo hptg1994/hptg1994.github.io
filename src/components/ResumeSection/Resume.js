@@ -101,7 +101,7 @@ class Resume extends React.Component {
       <div className = 'resume-detail-right resume-education'>
           <p>Bachelor Degree of Physical Science</p>
           <p>Changchun University of Science and Technology</p>
-          <p>Jinlin, China</p>
+          <p>Jilin, China</p>
       </div>
     </div>
     </React.Fragment>
