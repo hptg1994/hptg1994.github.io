@@ -9,6 +9,7 @@ import Projects_Viafly_Dashboard from './components/Projects/Projects-Viafly-Das
 import Projects_Viafly_Marketplace from './components/Projects/Projects-Viafly-Marketplace';
 import Projects_Expensify from './components/Projects/Projects-Expensify';
 import Projects_Timer from './components/Projects/Projects-Timer-Electron';
+import Projects_NHK_News from './components/Projects/Projects-NHKNews';
 // import Cell from './components/Cell';
 
 class App extends Component {
@@ -75,6 +76,7 @@ class App extends Component {
       </div>
 
       <div className="Projects">
+        <Projects_NHK_News />
         <Projects_Viafly_Marketplace />
         <Projects_Viafly_Dashboard />
         <Projects_Expensify />
