@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.13add91e.css",
   "main.css.map": "static/css/main.13add91e.css.map",
-  "main.js": "static/js/main.7a0ebf7d.js",
-  "main.js.map": "static/js/main.7a0ebf7d.js.map",
+  "main.js": "static/js/main.01920641.js",
+  "main.js.map": "static/js/main.01920641.js.map",
   "static/media/NHK_ScreenShot.png": "static/media/NHK_ScreenShot.71f0eee5.png",
   "static/media/expensify-web.png": "static/media/expensify-web.bbbdab64.png",
   "static/media/github.png": "static/media/github.957c4dd9.png",
@@ -26,6 +26,7 @@
   "static/media/logo-webstorm.png": "static/media/logo-webstorm.0fa98f28.png",
   "static/media/logo-xcode.png": "static/media/logo-xcode.c9886bfa.png",
   "static/media/logo-zeplin.png": "static/media/logo-zeplin.d2d08668.png",
+  "static/media/screen-shot-gif.gif": "static/media/screen-shot-gif.bd25fb3d.gif",
   "static/media/timer-electron.png": "static/media/timer-electron.d27512f6.png",
   "static/media/viafly-dashboard.png": "static/media/viafly-dashboard.822fd07a.png",
   "static/media/viafly-marketplace.png": "static/media/viafly-marketplace.e6a56a6d.png",
