@@ -7,7 +7,7 @@ class Projects_TODO extends Component {
       <div className = "projects-section">
         <h2 className="projects-title">TODO Mobile Client</h2>
         <div className = "projects-img-container">
-          <img src= {require("../../images/screen-shot-gif.gif")} alt="viafly-dashboard" className = "projects-img projects-mobile"/>
+          <img src= {require("../../images/screen-shot-gif.gif")} alt="viafly-dashboard" className = "projects-img"/>
           <div className="project-detail" style = {{right:'1%'}}>
             <p>TODO Mobile Client (Implment Design)</p>
             <article>
