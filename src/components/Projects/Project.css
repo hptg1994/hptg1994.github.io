@@ -25,6 +25,21 @@
   font-weight: 200;
 }
 
+
+/* Specific NHK Title */
+.project-title-nhk {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center;
+}
+
+.project-title-nhk img {
+  margin-left: 20px;
+  width: 10%;
+  height: 100%;
+}
+
 .projects-img-container {
   position: relative;
   display: flex;

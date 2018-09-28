@@ -5,7 +5,9 @@ class Projects_NHK_News extends Component {
   render() {
     return (
       <div className = "projects-section">
-        <h2 className="projects-title">NHK Easy News Mobile Client</h2>
+        <h2 className="projects-title project-title-nhk">NHK Easy News Mobile Client
+        <img src={require("../../images/NHK_New_Logo.png")} alt="nhk_app_logo"/>
+        </h2>
         <div className = "projects-img-container" style = {{width:"1034px"}}>
           <img src= {require("../../images/nhk-screenrecord.gif")} alt="viafly-dashboard" className = "projects-img" style = {{ width : "39%" }}/>
           <div className="project-detail" style = {{ right:"0px"}}>
