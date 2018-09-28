@@ -6,9 +6,9 @@ class Projects_NHK_News extends Component {
     return (
       <div className = "projects-section">
         <h2 className="projects-title">NHK Easy News Mobile Client</h2>
-        <div className = "projects-img-container">
-          <img src= {require("../../images/NHK_ScreenShot.png")} alt="viafly-dashboard" className = "projects-img projects-mobile"/>
-          <div className="project-detail" style = {{right:'1%'}}>
+        <div className = "projects-img-container" style = {{width:"1034px"}}>
+          <img src= {require("../../images/nhk-screenrecord.gif")} alt="viafly-dashboard" className = "projects-img" style = {{ width : "39%" }}/>
+          <div className="project-detail" style = {{ right:"0px"}}>
             <p>NHK Easy News Mobile Client</p>
             <article>
               A news mobile client that using Flutter to code the mobile client and using Spring Boot to set up the backend server.( So bascially I implement the api by myself )

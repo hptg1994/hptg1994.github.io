@@ -72,7 +72,7 @@ class App extends Component {
           <Card title="Viafly Marketplace" text="Jan 2018 ~ Now" image={require("./images/wallpaper.jpg")} />
           <Card title="Viafly Dashboard" text="March 2018 ~ Now" image={require("./images/wallpaper2.jpg")} />
           <Card title="Expensify" text="Oct ~ Dec 2017" image={require("./images/wallpaper3.jpg")} />
-          <Card title="Viafly Mobile Client" text="March 2018 ~ Now" image={require("./images/wallpaper4.jpg")} />
+          <Card title="NHK News Mobile Client" text="March 2018 ~ Now" image={require("./images/wallpaper4.jpg")} />
         </div>
       </div>
 
