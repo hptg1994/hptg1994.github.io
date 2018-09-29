@@ -166,7 +166,7 @@ a {
   justify-items: center;
 }
 
-@media(max-width:1060px){
+@media(max-width:1402px){
   .CardGroup {
     grid-template-columns: repeat(2,1fr);
   }
