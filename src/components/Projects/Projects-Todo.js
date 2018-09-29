@@ -5,7 +5,9 @@ class Projects_TODO extends Component {
   render() {
     return (
       <div className = "projects-section">
-        <h2 className="projects-title">TODO Mobile Client</h2>
+        <h2 className="projects-title project-title-todo">TODO Mobile Client
+        <img src={require("../../images/Todo_Logo.png")} alt="todo_app_logo"/>
+        </h2>
         <div className = "projects-img-container" style = {{width:"1034px"}}>
           <img src= {require("../../images/screen-shot-gif.gif")} alt="viafly-dashboard"/>
           <div className="project-detail" style = {{ right:0}}>

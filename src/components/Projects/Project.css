@@ -40,6 +40,23 @@
   height: 100%;
 }
 
+/* Specific Todo Title */
+.project-title-todo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center;
+}
+
+.project-title-todo img {
+  margin-left: 25px;
+  width: 17%;
+  height: 100%;
+  box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  
+}
+
 .projects-img-container {
   position: relative;
   display: flex;
