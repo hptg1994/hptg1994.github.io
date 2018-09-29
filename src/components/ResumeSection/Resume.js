@@ -37,7 +37,7 @@ class Resume extends React.Component {
       
       <div className = "resume-detail">
         <div className = "resume-detail-left">
-          <p>Web Framework</p>
+          <p id = "projectScroll" >Web Framework</p>
         </div>
         <div className = 'resume-detail-right'>
           <p>Spring, Rails</p>
