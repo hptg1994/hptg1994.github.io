@@ -63,6 +63,7 @@ class App extends Component {
                   <img src={require("./images/logo-django.png")} height="50" alt="django-logo" />
                   <img src={require("./images/logo-spring.png")} height="50" alt="spring-logo" />
                   <img src={require("./images/logo-rails.png")} height="50" alt="rails-logo" />
+                  <img src={require("./images/logo-dotnet.png")} height="50" alt="dotnet-logo" />
                   <img src={require("./images/logo-firebase.png")} height="50" alt="firebase-logo" />
                   <img src={require("./images/logo-postgres.png")} height="50" alt="postgres-logo" />
                   <img src={require("./images/logo-mysql.png")} height="50" alt="mysql-logo" />
