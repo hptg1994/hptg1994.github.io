@@ -22,7 +22,7 @@ class Resume extends React.Component {
             <p>Programming Language</p>
           </div>
           <div className='resume-detail-right'>
-            <p>Javascript, Java, Dart, Python, Typescript, C#, Ruby</p>
+            <p>Javascript, Java, Dart, Swift, Python, Typescript, C#, Ruby</p>
           </div>
         </div>
 
@@ -31,7 +31,7 @@ class Resume extends React.Component {
             <p>Web Programming</p>
           </div>
           <div className='resume-detail-right'>
-            <p>React, Redux, Vue, Vuex, Angular, Flutter, React Native </p>
+            <p>React, Redux, Vue, Vuex, Angular, Flutter, React Native, Electron </p>
           </div>
         </div>
 
