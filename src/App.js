@@ -120,7 +120,7 @@ class App extends Component {
               </div>
               <div className="AboutMySelf-Detail-info">
                 <i className="material-icons">email</i>
-                <p>hptg1994@gmail.com</p>
+                <p>pintaigao@gmail.com</p>
               </div>
               <div className="AboutMySelf-Detail-info">
                 <i className="material-icons">phone</i>
