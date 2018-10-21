@@ -68,14 +68,14 @@ class App extends Component {
                   <img src={require("./images/logo-postgres.png")} height="50" alt="postgres-logo" />
                   <img src={require("./images/logo-mysql.png")} height="50" alt="mysql-logo" />
                   <img src={require("./images/logo-teamsql.png")} height="50" alt="teamsql-logo" />
-                  <img src={require("./images/logo-xcode.png")} height="50" alt="xcode-logo" id = "resumeScroll"/>
+                  <img src={require("./images/logo-xcode.png")} height="50" alt="xcode-logo" id="resumeScroll" />
                   <img src={require("./images/logo-vscode.png")} height="50" alt="vscode-logo" />
                   <img src={require("./images/logo-idea.png")} height="50" alt="idea-logo" />
                   <img src={require("./images/logo-webstorm.png")} height="50" alt="webstorm-logo" />
                   <img src={require("./images/logo-android-studio.png")} height="50" alt="android-studio-logo" />
                   <img src={require("./images/logo-sketch.png")} height="50" alt="sketch-logo" />
                   <img src={require("./images/logo-zeplin.png")} height="50" alt="zeplin-logo" />
-                  <Link to = "resumeScroll" containerId = "resumeContainer" activeClass="active" spy={true} smooth={true} duration={500} className = "resumeScroll">
+                  <Link to="resumeScroll" containerId="resumeContainer" activeClass="active" spy={true} smooth={true} duration={500} className="resumeScroll">
                     <img src={require("./images/logo-git.png")} height="50" alt="git-logo" />
                   </Link>
                 </div>
@@ -85,9 +85,9 @@ class App extends Component {
           </Element>
         </div>
 
-          <div className="Resume-Section" id="resumeContainer">
-            <Resume />
-          </div>
+        <div className="Resume-Section" id="resumeContainer">
+          <Resume />
+        </div>
 
         <div className="Cards">
           <h2>Projects Presently Being Developing</h2>
@@ -109,34 +109,37 @@ class App extends Component {
         </div>
 
         <section className="AboutMySelf-Section">
+          <h2>Get in touch</h2>
           <div className="AboutMySelf-Detail">
-            <p>Get in touch</p>
-            <p className="p-CONTACT_DETAILS">CONTACT DETAILS</p>
-            <div className="AboutMySelf-Detail-info">
-              <i className="material-icons">location_on</i>
-              <p>Austin, TX</p>
+            <img src={require("./images/MyAwesomePhoto.png")} alt="handsome" className = "AboutMySelf-Detail-Snapshot"/>
+            <div className="AboutMySelf-Detail-Right">
+              <p className="p-CONTACT_DETAILS">CONTACT DETAILS</p>
+              <div className="AboutMySelf-Detail-info">
+                <i className="material-icons">location_on</i>
+                <p>Austin, TX</p>
+              </div>
+              <div className="AboutMySelf-Detail-info">
+                <i className="material-icons">email</i>
+                <p>hptg1994@gmail.com</p>
+              </div>
+              <div className="AboutMySelf-Detail-info">
+                <i className="material-icons">phone</i>
+                <p>201-844-3982</p>
+              </div>
+              <p className="p-CONTACT_DETAILS">SOCIAL</p>
+              <ul className='social-group'>
+                <li>
+                  <a href="https://www.linkedin.com/in/pintaigao-he-20a067138/">
+                    <img src={require("./images/social/linkedin.png")} alt="linkedin-logo" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/hptg1994/">
+                    <img src={require("./images/social/github.png")} alt="github-logo" />
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div className="AboutMySelf-Detail-info">
-              <i className="material-icons">email</i>
-              <p>hptg1994@gmail.com</p>
-            </div>
-            <div className="AboutMySelf-Detail-info">
-              <i className="material-icons">phone</i>
-              <p>201-844-3982</p>
-            </div>
-            <p className="p-CONTACT_DETAILS">SOCIAL</p>
-            <ul className='social-group'>
-              <li>
-                <a href="https://www.linkedin.com/in/pintaigao-he-20a067138/">
-                  <img src={require("./images/social/linkedin.png")} alt="linkedin-logo" />
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/hptg1994/">
-                  <img src={require("./images/social/github.png")} alt="github-logo" />
-                </a>
-              </li>
-            </ul>
           </div>
           <div className="footer">
             <p>Created By Pintaigao&copy;</p>

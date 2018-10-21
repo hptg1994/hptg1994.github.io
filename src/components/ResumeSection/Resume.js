@@ -105,7 +105,7 @@ class Resume extends React.Component {
             <div>
               <p>Master Degree of Computer Science</p>
               <p>Stevens Institute of Technology</p>
-              <p>Hokoken, NJ, USA</p>
+              <p>Hoboken, NJ, USA</p>
             </div>
 
           </div>
